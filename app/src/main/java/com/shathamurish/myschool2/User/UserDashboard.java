@@ -52,11 +52,12 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 //       imageList.add(new SlideModel("https://bit.ly/2YoJ77H\"));
 //       imageList.add(new SlideModel("https://bit.ly/2YoJ77H\"));
 //       imageList.add(new SlideModel("https://bit.ly/2YoJ77H\"));
-        imageList.add(new SlideModel(R.drawable.a, "شوشو",ScaleTypes.FIT));
-        imageList.add(new SlideModel(R.drawable.b,"شزا" ,ScaleTypes.FIT));
-        imageList.add(new SlideModel(R.drawable.c, "مرحبا",ScaleTypes.FIT));
-        imageList.add(new SlideModel(R.drawable.d,"hello", ScaleTypes.FIT));
-        imageList.add(new SlideModel(R.drawable.f,"hi", ScaleTypes.FIT));
+        imageList.add(new SlideModel(R.drawable.sch10_1, "شوشو",ScaleTypes.FIT));
+        imageList.add(new SlideModel(R.drawable.sch9,"شزا" ,ScaleTypes.FIT));
+        imageList.add(new SlideModel(R.drawable.sch5, "مرحبا",ScaleTypes.FIT));
+        imageList.add(new SlideModel(R.drawable.sch6,"hello", ScaleTypes.FIT));
+        imageList.add(new SlideModel(R.drawable.sch11_1,"hi", ScaleTypes.FIT));
+        imageList.add(new SlideModel(R.drawable.libraryicon,"hi", ScaleTypes.FIT));
 
          imageSlider.setImageList(imageList,ScaleTypes.FIT);
 
