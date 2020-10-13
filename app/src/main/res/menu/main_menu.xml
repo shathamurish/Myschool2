@@ -13,39 +13,39 @@
         <item
             android:id="@+id/nav_news"
             android:title="@string/news"
-            android:icon="@drawable/ic_home"/>
+            android:icon="@drawable/newsss"/>
         <item
             android:id="@+id/nav_library"
             android:title="@string/library"
-            android:icon="@drawable/ic_library"/>
+            android:icon="@drawable/library1"/>
 
         <item
             android:id="@+id/nav_activity"
             android:title="@string/activity"
-            android:icon="@drawable/ic_home"/>
+            android:icon="@drawable/active"/>
         <item
             android:id="@+id/nav_student"
             android:title="@string/student"
-            android:icon="@drawable/ic_home"/>
+            android:icon="@drawable/studentsicon"/>
 
 
 
     </group>
 
-    <item android:title="Profile">
-<menu>
+ <item android:title="Profile">
+
     <group
 
         android:checkableBehavior="single">
         <item
             android:id="@+id/nav_1"
-            android:title="@string/home"
-            android:icon="@drawable/ic_home"/>
+            android:title="@string/contactus"
+            android:icon="@drawable/contact_us"/>
 
         <item
             android:id="@+id/nav_2"
-            android:title="@string/news"
-            android:icon="@drawable/ic_home"/>
+            android:title="@string/knowas"
+            android:icon="@drawable/information2"/>
         <item
             android:id="@+id/nav_3"
             android:title="@string/library"
@@ -63,9 +63,6 @@
 
 
     </group>
-</menu>
 
-
-    </item>
-
+ </item>
 </menu>
