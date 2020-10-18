@@ -48,35 +48,36 @@
             <!--            app:layout_constraintTop_toTopOf="parent"-->
             <!--            app:navigationIcon="@drawable/ic_baseline_menu_24" />-->
 
-            <RelativeLayout
+            <androidx.appcompat.widget.Toolbar
                 android:id="@+id/menu_re"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:padding="10dp"
+                app:titleTextColor="@color/black"
                 app:layout_constraintBottom_toTopOf="@+id/image_slider"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <ImageView
-                    android:id="@+id/menuicon"
-                    android:layout_width="25dp"
+<!--                <ImageView-->
+<!--                    android:id="@+id/menuicon"-->
+<!--                    android:layout_width="25dp"-->
 
-                    android:layout_height="25dp"
-                    android:layout_centerVertical="true"
-                    app:srcCompat="@drawable/icon_menu3" />
+<!--                    android:layout_height="25dp"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    app:srcCompat="@drawable/icon_menu3" />-->
 
-                <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
+<!--                <ImageView-->
+<!--                    android:layout_width="25dp"-->
+<!--                    android:layout_height="25dp"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:layout_centerVertical="true"-->
 
-                    app:srcCompat="@drawable/icon_plus2" />
+<!--                    app:srcCompat="@drawable/icon_plus2" />-->
 
 
-            </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
 
             <com.denzcoskun.imageslider.ImageSlider
                 android:id="@+id/image_slider"
@@ -114,10 +115,13 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
+                    android:id="@+id/library"
+                    android:onClick="actionlibrary"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="30dp">
+                    app:cardCornerRadius="30dp"
+                    android:transitionName="transition_login">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -148,10 +152,13 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
+                    android:id="@+id/news"
+                    android:onClick="actionnews"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="30dp">
+                    app:cardCornerRadius="30dp"
+                    android:transitionName="transition_login">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -196,13 +203,17 @@
                 app:layout_constraintTop_toBottomOf="@+id/linear1">
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/login"
+                    android:onClick="actionlogin"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="30dp">
+                    app:cardCornerRadius="30dp"
+                    android:transitionName="transition_login">
 
                     <RelativeLayout
+
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
@@ -220,21 +231,26 @@
                             android:textStyle="bold" />
 
                         <ImageView
+
                             android:id="@+id/imageView3"
                             android:layout_width="75dp"
                             android:layout_height="75dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="5dp"
-                            app:srcCompat="@drawable/studentsicon" />
+                            app:srcCompat="@drawable/studentsicon"
+                           />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
+                    android:id="@+id/activity"
+                    android:onClick="actionactivity"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="30dp">
+                    app:cardCornerRadius="30dp"
+                    android:transitionName="transition_login">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -280,10 +296,13 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
+                    android:id="@+id/onlineregister"
+                    android:onClick="actionregister"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="30dp">
+                    app:cardCornerRadius="30dp"
+                    android:transitionName="transition_login">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -314,10 +333,13 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
+                    android:id="@+id/knowus"
+                    android:onClick="actionknowus"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    app:cardCornerRadius="30dp">
+                    app:cardCornerRadius="30dp"
+                    android:transitionName="transition_login">
 
                     <RelativeLayout
                         android:layout_width="match_parent"

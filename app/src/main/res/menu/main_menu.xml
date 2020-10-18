@@ -38,18 +38,18 @@
 
         android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_1"
+            android:id="@+id/nav_contactus"
             android:title="@string/contactus"
             android:icon="@drawable/contact_us"/>
 
         <item
-            android:id="@+id/nav_2"
+            android:id="@+id/nav_knowus"
             android:title="@string/knowas"
             android:icon="@drawable/information2"/>
         <item
-            android:id="@+id/nav_3"
-            android:title="@string/library"
-            android:icon="@drawable/ic_library"/>
+            android:id="@+id/nav_register"
+            android:title="@string/onlineregister"
+            android:icon="@drawable/registericon"/>
 
         <item
             android:id="@+id/nav_4"
