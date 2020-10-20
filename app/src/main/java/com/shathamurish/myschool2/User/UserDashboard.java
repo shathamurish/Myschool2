@@ -291,7 +291,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
     }
 
     public void actionknowus(View view) {
-        Intent intent = new Intent(UserDashboard.this, KnowusActivity.class);
+        Intent intent = new Intent(UserDashboard.this, ContactusActivity.class);
 
         Pair[]  pairs=new Pair[1];
 //

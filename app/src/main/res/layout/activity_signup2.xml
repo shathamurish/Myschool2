@@ -33,10 +33,10 @@
             android:id="@+id/imgIconLike"
             android:layout_width="220dp"
             android:layout_height="120dp"
+            android:layout_marginTop="150dp"
+
+
             android:transitionName="transition_image_btn"
-
-
-            android:layout_marginTop="100dp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
