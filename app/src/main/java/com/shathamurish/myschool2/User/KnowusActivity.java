@@ -31,6 +31,7 @@ public class KnowusActivity extends FragmentActivity implements OnMapReadyCallba
         map=googleMap;
         LatLng school=new LatLng(15.311525 ,44.198586);
         map.addMarker(new MarkerOptions().position(school).title("Home Of Modern Science School"));
-       // map.moveCamera(CameraUpdateFactory.newLatLng(school));
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(school ,13));
+
     }
 }
