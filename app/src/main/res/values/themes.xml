@@ -17,9 +17,15 @@
 
     <style name="Theme.Myschool2.NoActionBar">
         <item name="windowActionBar">false</item>
+<!--      <item name="android:fontFamily">@font/sukarblack/</item>-->
+<!--        <item name="android:fontFamily">@font/sukarbold/</item>-->
+<!--        <item name="android:fontFamily">@font/sukarregular/</item>-->
 
 
     </style>
+<!--    <style name="SpinnerTheme" parent="android:Widget.Spinner">-->
+<!--        <item name="android:background">@drawable/ic_down_name</item>-->
+<!--    </style>-->
 
     <style name="Theme.Myschool2.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

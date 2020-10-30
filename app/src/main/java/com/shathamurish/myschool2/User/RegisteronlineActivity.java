@@ -56,4 +56,9 @@ public class RegisteronlineActivity extends AppCompatActivity {
             startActivity(intent2);
         }
     }
+
+    public void backlayout(View view) {
+        Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
+        startActivity(intent);
+    }
 }

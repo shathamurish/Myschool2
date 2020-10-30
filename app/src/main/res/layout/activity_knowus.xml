@@ -19,29 +19,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:icon="@drawable/certificate"-->
+<!--            android:text="Certfication"-->
+<!--           />-->
+
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:icon="@drawable/building"-->
+<!--            android:text="About School" />-->
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="292dp"
+
+        android:layout_marginBottom="1dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/view_pager2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicatorAnimationDuration="1400"
+        app:tabIndicatorColor="@android:color/holo_orange_dark" />
 
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/certificate"
-            android:text="Certfication" />
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/america"
-            android:text="About School" />
-
-    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager2"
+        android:layout_width="match_parent"
+        android:layout_height="387dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout3"
+        tools:layout_editor_absoluteX="2dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

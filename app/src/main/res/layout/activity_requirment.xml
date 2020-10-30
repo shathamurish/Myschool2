@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RequirmentActivity">
+
+
+    <WebView
+        android:id="@+id/gif"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/white"
+        android:outlineAmbientShadowColor="@color/white"
+        android:outlineSpotShadowColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gif">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/sukarblack"
+                android:padding="20dp"
+                android:layout_marginTop="10dp"
+                android:text="1-Original Vaccination certificate\n2-Original birth certificate\n3-photo size 4 x 6\n4-Letter of transfer if located outside the educational district\n5-Provide all previous attested academic grade certificates from all previous schools\n6-Pay registeration and first term fees\n7-Bring an expatriate form for international students\n8-Attest abroad certificates in the embassies - foreign affairs- ministry of education"
+                android:textSize="17sp"
+                />
+        </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,7 +13,7 @@ import com.shathamurish.myschool2.R;
 
 public class ContactusActivity extends AppCompatActivity {
 
-    String email ="shady.fahme@gmail.com";
+    String email ="info@hmss-edu.com";
     TextInputEditText subject ,messag;
     Button sendmessag;
     @Override
@@ -32,9 +32,9 @@ public class ContactusActivity extends AppCompatActivity {
                 Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:" + email));
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT,subject.getText().toString());
                 emailIntent.putExtra(Intent.EXTRA_TITLE,messag.getText().toString());
-                emailIntent.setType("message/rfc822");
-               // startActivity(emailIntent);
-                startActivity(Intent.createChooser(emailIntent,"Choose Mail App"));
+
+                startActivity(emailIntent);
+                //startActivity(Intent.createChooser(emailIntent,"Choose Mail App"));
             }
         });
     }

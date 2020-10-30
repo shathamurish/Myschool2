@@ -81,7 +81,7 @@
 
             <com.denzcoskun.imageslider.ImageSlider
                 android:id="@+id/image_slider"
-                android:layout_width="492dp"
+                android:layout_width="match_parent"
                 android:layout_height="217dp"
 
                 android:layout_margin="10dp"
@@ -90,9 +90,9 @@
                 android:layout_marginEnd="10dp"
                 app:iss_auto_cycle="true"
                 app:iss_corner_radius="0"
-                app:iss_delay="10"
+                app:iss_delay="0"
                 app:iss_period="1000"
-                app:iss_placeholder="@drawable/placeholder"
+
                 app:layout_constraintBottom_toTopOf="@id/linear1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.516"
@@ -339,7 +339,7 @@
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
-                    android:onClick="actionknowus"
+                    android:onClick="actioncontact"
                     android:transitionName="transition_login"
                     app:cardCornerRadius="30dp">
 
@@ -366,7 +366,7 @@
                             android:layout_height="75dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            app:srcCompat="@drawable/gg" />
+                            app:srcCompat="@drawable/contact_us" />
 
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -387,7 +387,7 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:id="@+id/a"
-                    android:onClick="actionregister"
+                    android:onClick="actionknowus"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
@@ -406,25 +406,25 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="5dp"
 
-                            android:text="Register"
+                            android:text="Know Us"
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
                         <ImageView
                             android:id="@+id/imageView7"
-                            android:layout_width="75dp"
+                            android:layout_width="50dp"
                             android:layout_height="75dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            app:srcCompat="@drawable/online_registration" />
+                            app:srcCompat="@drawable/marker" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:id="@+id/b"
-                    android:onClick="actionknowus"
+                    android:onClick="actionlevel"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_weight="1"
@@ -443,7 +443,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="5dp"
 
-                            android:text="Contact us"
+                            android:text="School Levels"
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -454,7 +454,7 @@
                             android:layout_height="75dp"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            app:srcCompat="@drawable/gg" />
+                            app:srcCompat="@drawable/icons8stairs" />
 
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>

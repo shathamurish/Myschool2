@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.shathamurish.myschool2">
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Myschool2">
-        <activity android:name=".User.Signup2Activity"></activity>
+        <activity android:name=".LevelsActivity"></activity>
+        <activity android:name=".RequirmentActivity" />
+        <activity android:name=".User.Signup2Activity" />
         <activity android:name=".User.SignupActivity" />
         <activity android:name=".User.RegisteronlineActivity" />
         <activity android:name=".User.ContactusActivity" />
@@ -24,8 +28,11 @@
         <activity android:name=".User.LibraryActivity" />
         <activity android:name=".Common.OnBording" />
         <activity android:name=".User.UserDashboard" />
-        <meta-data android:name="com.google.android.geo.API_KEY"
-            android:value="@string/map_key"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
+
         <activity android:name=".Common.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -33,4 +33,37 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="Hmss.edu">Hmss.edu</string>
+    <string name="Hmss.edu2">Hmss.edu</string>
+
+
+    <string name="txtCredits"><a href="google.com">Google</a></string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="certi">أنشئت مدارس موطن العلوم الحديثة بموجب قرار وزارة التعليم العالي للعام 2020 وتم اعتمادها بشكل رسمي وفق معايير ومواصفات دولية</string>
+    <string name="certfication">Certfication</string>
+    <string name="_967776779292">+967776779292</string>
+    <string name="number">+01 423 692 - + 433 592</string>
+    <string name="telegram_me_hmss_edu">hmss_edu</string>
+    <string name="info_hmss_edu_com">info@hmss-edu.com</string>
+    <string name="sanaa_hadda_st_near_germany_embassy">Sanaa,Hadda St. Near Germany Embassy</string>
+    <string name="last_news">Last News</string>
+    <string name="view_all">View All</string>
+    <string name="announcements">Announcements</string>
+
+    <string-array name="arraylist">
+        <item>Choose Level</item>
+        <item>K.G1</item>
+        <item>K.G2</item>
+        <item>Level1</item>
+        <item>Level2</item>
+        <item>Level3</item>
+        <item>Level4</item>
+        <item>Level5</item>
+        <item>Level6</item>
+        <item>Level7</item>
+        <item>Level8</item>
+        <item>Level9</item>
+    </string-array>
 </resources>
+

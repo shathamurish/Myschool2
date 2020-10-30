@@ -50,7 +50,9 @@
             android:layout_height="wrap_content"
             android:background="@color/darkbluee"
             android:text="@string/lets_get_start"
+            android:fontFamily="@font/sukarblack"
             android:textColor="@color/white"
+
             android:visibility="invisible" />
 
         <LinearLayout

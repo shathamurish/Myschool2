@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".User.About_Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/hometitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/sukarblack"
+                    android:text="Home of Modern Sciences Schools"
+                    android:textColor="@color/darkblue"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+
+                    app:layout_constraintBottom_toTopOf="@id/scl"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/scl"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintBottom_toTopOf="@id/linearLayout7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/hometitle"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/schoolll" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/scl">
+
+                    <TextView
+                        android:id="@+id/gool"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/sukarblack"
+                        android:text="General Goal :"
+                        android:textColor="@color/darkblue"
+                        android:textSize="25sp" />
+
+                    <CheckedTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="@font/sukarregular"
+                        android:text="Applying high quality systems and standards in education and applying modern educational strategies and methods."
+                        android:textColor="@color/blue"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/sukarblack"
+                        android:text="Goals of School:"
+                        android:textColor="@color/darkblue"
+                        android:textSize="25sp" />
+
+                    <CheckedTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="@font/sukarregular"
+                        android:minLines="3"
+                        android:text="1- Choosing and improving skills efficiencies from a variety of different qualities to achieve an extraordinary achievements \n2- Providing, encouraging and stimulating advanced educational environment that meets the practical and educational needs that monitors thelevels of students."
+                        android:textColor="@color/blue"
+
+                        android:textSize="20sp" />
+
+                    <CheckedTextView
+                        android:id="@+id/checkedTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:fontFamily="@font/sukarregular"
+                        android:text="3- Providing an indoor and outdoor activities that contribute to building an integrated, balanced and creative personality.\n4- Providing an administrative and automated system that achieves internal and external sufficiencies of our school.\n5- Applying high quality systems and standards in education and applying modern education strategies and methods.\n6- Expanding the participation in the community to achieve the goals of modern education.\n7- Development of national education among our students.\n8- Providing extraordinary education in a friendly environment that will raise our students to high levels in modern education."
+                        android:textColor="@color/blue"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

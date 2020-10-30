@@ -32,6 +32,11 @@ public class StudentActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), AcivitiesStudentActivity.class);
         startActivity(intent);
     }
+
+    public void backlayout(View view) {
+        Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
+        startActivity(intent);
+    }
 }
 
 //    private void registerHandler() {

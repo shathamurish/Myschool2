@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".User.Certificat_Fragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="200dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <!-- TODO: Update blank fragment layout -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/cer"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintBottom_toTopOf="@id/certtitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/certi2" />
+
+                <TextView
+                    android:id="@+id/certtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/sukarblack"
+                    android:text="@string/certfication"
+                    android:textColor="@color/darkblue"
+                    android:textSize="25sp"
+                    app:layout_constraintBottom_toTopOf="@id/scholldesc"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/cer" />
+
+                <CheckedTextView
+                    android:id="@+id/scholldesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sukarregular"
+                    android:text="@string/certi"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/blue"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@id/lin1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/certtitle" />
+
+                <LinearLayout
+                    android:id="@+id/lin1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_weight="1"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/scholldesc">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            tools:ignore="NestedWeights">
+
+                            <ImageView
+                                android:id="@+id/facebook"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:src="@drawable/facebook"
+                                tools:ignore="ContentDescription,NestedWeights" />
+
+                            <ImageView
+                                android:id="@+id/whatsapp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:src="@drawable/whatsapp"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:id="@+id/instgram"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:src="@drawable/instagram"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:id="@+id/telegram"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:src="@drawable/telegram"
+                                tools:ignore="ContentDescription" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/link1"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="15dp"
+
+
+                                android:text="@string/Hmss.edu"
+                                android:textColor="@color/blue"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/textView10"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="20dp"
+
+                                android:fontFamily="@font/sukarblack"
+                                android:text="@string/_967776779292" />
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="15dp"
+
+                                android:text="@string/Hmss.edu2" />
+
+                            <TextView
+                                android:id="@+id/textView12"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="25dp"
+                                android:fontFamily="@font/sukarblack"
+                                android:text="@string/telegram_me_hmss_edu" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            tools:ignore="NestedWeights">
+
+                            <ImageView
+                                android:id="@+id/emailll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:src="@drawable/email"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:id="@+id/call"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:src="@drawable/tel"
+                                tools:ignore="ContentDescription" />
+
+                            <ImageView
+                                android:id="@+id/web"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:src="@drawable/marker"
+                                tools:ignore="ContentDescription" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="5"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/link2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="15dp"
+
+
+                                android:text="@string/info_hmss_edu_com"
+                                android:textColor="@color/blue"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/textView13"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="40dp"
+
+                                android:fontFamily="@font/sukarblack"
+                                android:text="@string/number" />
+
+
+                            <TextView
+                                android:id="@+id/textView14"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="30dp"
+
+
+                                android:fontFamily="@font/sukarblack"
+                                android:text="@string/sanaa_hadda_st_near_germany_embassy" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</ScrollView>

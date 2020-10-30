@@ -24,8 +24,14 @@ import android.widget.ScrollView;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.shashank.sony.fancytoastlib.FancyToast;
+import com.shathamurish.myschool2.LevelsActivity;
 import com.shathamurish.myschool2.R;
+import com.shathamurish.myschool2.RequirmentActivity;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -57,18 +63,30 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         contentView = findViewById(R.id.content1);
 
         final List<SlideModel> imageList = new ArrayList<>();
-//       imageList.add(new SlideModel("https://bit.ly/2YoJ77H\"));
-//       imageList.add(new SlideModel("https://bit.ly/2YoJ77H\"));
-//       imageList.add(new SlideModel("https://bit.ly/2YoJ77H\"));
-//       imageList.add(new SlideModel("https://bit.ly/2YoJ77H\"));
-        imageList.add(new SlideModel(R.drawable.sch10_1, "شوشو", ScaleTypes.FIT));
-        imageList.add(new SlideModel(R.drawable.sch9, "شزا", ScaleTypes.FIT));
-        imageList.add(new SlideModel(R.drawable.sch5, "مرحبا", ScaleTypes.FIT));
-        imageList.add(new SlideModel(R.drawable.sch6, "hello", ScaleTypes.FIT));
-        imageList.add(new SlideModel(R.drawable.sch11_1, "hi", ScaleTypes.FIT));
-        imageList.add(new SlideModel(R.drawable.libraryicon, "hi", ScaleTypes.FIT));
 
-        imageSlider.setImageList(imageList, ScaleTypes.FIT);
+        FirebaseDatabase.getInstance().getReference().child("slider")
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+                        for(DataSnapshot data:snapshot.getChildren())
+                            imageList.add(new SlideModel(data.child("image").getValue().toString(),data.child("title").getValue().toString(),ScaleTypes.FIT));
+                        imageSlider.setImageList(imageList, ScaleTypes.FIT);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull @NotNull DatabaseError error) {
+
+                    }
+                });
+//
+//        imageList.add(new SlideModel(R.drawable.sch10_1, "شوشو", ScaleTypes.FIT));
+//        imageList.add(new SlideModel(R.drawable.sch9, "شزا", ScaleTypes.FIT));
+//        imageList.add(new SlideModel(R.drawable.sch5, "مرحبا", ScaleTypes.FIT));
+//        imageList.add(new SlideModel(R.drawable.sch6, "hello", ScaleTypes.FIT));
+//        imageList.add(new SlideModel(R.drawable.sch11_1, "hi", ScaleTypes.FIT));
+//        imageList.add(new SlideModel(R.drawable.libraryicon, "hi", ScaleTypes.FIT));
+//
+//        imageSlider.setImageList(imageList, ScaleTypes.FIT);
 
         //menu hooks
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -199,6 +217,23 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
                 FancyToast.makeText(this,"Online Registeration !",FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show();
                 break;
+
+
+            case R.id.nav_5:
+//
+                Intent intent8= new Intent(UserDashboard.this, RequirmentActivity.class);
+                startActivity(intent8);
+
+                FancyToast.makeText(this,"Online Registeration Requirment !",FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show();
+                break;
+
+            case R.id.nav_4:
+//
+                Intent intent9= new Intent(UserDashboard.this, LevelsActivity.class);
+                startActivity(intent9);
+
+                FancyToast.makeText(this,"levels of school !",FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show();
+                break;
 //
 
         }
@@ -290,12 +325,48 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         }
     }
 
-    public void actionknowus(View view) {
+    public void actioncontact(View view) {
         Intent intent = new Intent(UserDashboard.this, ContactusActivity.class);
 
         Pair[]  pairs=new Pair[1];
 //
         pairs[0]=new Pair<View,String>(findViewById(R.id.knowus),"transition_login");
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            ActivityOptions options=ActivityOptions.makeSceneTransitionAnimation(UserDashboard.this,pairs);
+            startActivity(intent ,options.toBundle());
+        }
+        else {
+
+            startActivity(intent);
+        }
+    }
+
+    public void actionknowus(View view) {
+
+        Intent intent = new Intent(UserDashboard.this, KnowusActivity.class);
+
+        Pair[]  pairs=new Pair[1];
+//
+        pairs[0]=new Pair<View,String>(findViewById(R.id.a),"transition_login");
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+            ActivityOptions options=ActivityOptions.makeSceneTransitionAnimation(UserDashboard.this,pairs);
+            startActivity(intent ,options.toBundle());
+        }
+        else {
+
+            startActivity(intent);
+        }
+    }
+
+    public void actionlevel(View view) {
+
+        Intent intent = new Intent(UserDashboard.this, LevelsActivity.class);
+
+        Pair[]  pairs=new Pair[1];
+//
+        pairs[0]=new Pair<View,String>(findViewById(R.id.b),"transition_login");
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
             ActivityOptions options=ActivityOptions.makeSceneTransitionAnimation(UserDashboard.this,pairs);

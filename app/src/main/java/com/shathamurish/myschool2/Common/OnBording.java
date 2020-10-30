@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
@@ -18,6 +20,7 @@ import android.widget.TextView;
 
 import com.shathamurish.myschool2.Help.SliderAdapter;
 import com.shathamurish.myschool2.R;
+import com.shathamurish.myschool2.User.ContactusActivity;
 import com.shathamurish.myschool2.User.UserDashboard;
 
 public class OnBording extends AppCompatActivity {
@@ -44,6 +47,19 @@ public class OnBording extends AppCompatActivity {
         viewPager = findViewById(R.id.slider);
         dots_layout = findViewById(R.id.dots);
         letsgetstarted=findViewById(R.id.getstarted_btn);
+
+        letsgetstarted.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                 Intent intent = new Intent(OnBording.this, UserDashboard.class);
+
+            startActivity(intent);
+        }
+
+
+
+        });
 
         //calls adapter
 

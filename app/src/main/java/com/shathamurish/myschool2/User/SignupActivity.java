@@ -31,7 +31,7 @@ public class SignupActivity extends AppCompatActivity {
 
     public void actionlogin(View view) {
 
-        Intent intent = new Intent(getApplicationContext(), AcivitiesStudentActivity.class);
+        Intent intent = new Intent(getApplicationContext(), RegisteronlineActivity.class);
         startActivity(intent);
 //        Pair[]  pairs=new Pair[1];
 //
@@ -55,6 +55,12 @@ public class SignupActivity extends AppCompatActivity {
         } else {
             startActivity(intent2);
         }
+
+    }
+
+    public void backlayout(View view) {
+        Intent intent = new Intent(getApplicationContext(),RegisteronlineActivity.class);
+        startActivity(intent);
 
     }
 }

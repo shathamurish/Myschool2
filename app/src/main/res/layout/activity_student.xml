@@ -3,143 +3,143 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".User.StudentActivity"
     android:padding="0dp"
     android:transitionName="transition_login">
-    
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/back_login"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:onClick="backlayout"
+
+        app:layout_constraintBottom_toTopOf="@+id/imgIconLike"
+        app:layout_constraintEnd_toStartOf="@+id/imgIconLike"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/back" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/imgIconLike"
+        android:layout_width="220dp"
+        android:layout_height="120dp"
 
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/back_login"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/login" />
 
-            app:layout_constraintBottom_toTopOf="@+id/imgIconLike"
-            app:layout_constraintEnd_toStartOf="@+id/imgIconLike"
-            app:layout_constraintHorizontal_bias="0.508"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/back" />
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:orientation="vertical"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/imgIconLike"
-            android:layout_width="220dp"
-            android:layout_height="120dp"
-
-
-            android:layout_marginTop="200dp"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.452"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/login" />
-
-        <LinearLayout
-            android:id="@+id/linearLayout3"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="350dp"
-            android:orientation="vertical"
-            android:padding="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
+            android:hint="Enter Username"
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:inputType="textEmailAddress"
+            app:boxStrokeColor="@color/blue"
+            app:boxStrokeWidthFocused="2dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/darkblue"
+            app:startIconDrawable="@drawable/username24"
+            app:startIconTint="#1935E8">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter Username"
-
-                android:inputType="textEmailAddress"
-                app:boxStrokeColor="@color/blue"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="clear_text"
-                app:endIconTint="@color/darkblue"
-                app:startIconDrawable="@drawable/username24"
-                app:startIconTint="#1935E8">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/baloo"
-                    android:textColor="@color/blue"
-                    app:hintTextColor="@color/blue" />
+                android:layout_height="match_parent"
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/blue"
+                app:hintTextColor="@color/blue" />
 
 
-            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            app:boxStrokeColor="@color/blue"
+            app:boxStrokeWidthFocused="2dp"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/darkblue"
+            app:startIconDrawable="@drawable/ic_outline_lock_24"
+            app:startIconTint="#1935E8">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/blue"
+                app:hintTextColor="@color/blue" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <CheckBox
+                style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Enter Password"
-                android:inputType="textPassword"
-                app:boxStrokeColor="@color/blue"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="password_toggle"
-                app:endIconTint="@color/darkblue"
-                app:startIconDrawable="@drawable/ic_outline_lock_24"
-                app:startIconTint="#1935E8">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/baloo"
-                    android:textColor="@color/blue"
-                    app:hintTextColor="@color/blue" />
-
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
-
-                <CheckBox
-                    style="@style/Widget.AppCompat.CompoundButton.CheckBox"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:buttonTint="@color/darkblue"
-                    android:text="Remember Me"
-                    android:textColor="@color/darkblue" />
-
-
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/button_login"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="actionlogin"
-                android:text="Login"
-                android:textStyle="bold" />
+                android:buttonTint="@color/darkblue"
+                android:text="Remember Me"
+                android:textColor="@color/darkblue" />
 
 
         </LinearLayout>
 
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="actionlogin"
+            android:text="Login"
+            android:textStyle="bold" />
 
+
+    </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
+    </ScrollView>
 
 
 
 
 
-</ScrollView>
+
+

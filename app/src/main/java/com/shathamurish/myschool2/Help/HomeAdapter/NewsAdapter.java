@@ -1,5 +1,6 @@
 package com.shathamurish.myschool2.Help.HomeAdapter;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,7 +30,9 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
     @Override
     public NewsViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup viewGroup, int i) {
        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.news_design_card,viewGroup,false);
+     //   View view2 = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.annos_layout,viewGroup,false);
        NewsViewHolder newsViewHolder=new NewsViewHolder(view);
+        //NewsViewHolder newsViewHolder2=new NewsViewHolder(view2);
 
         return newsViewHolder;
     }
@@ -40,6 +43,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         NewsHelper newsHelper =newslocation.get(i);
         newsViewHolder.image.setImageResource(newsHelper.getImage());
         newsViewHolder.title.setText(newsHelper.getTitle());
+       // newsViewHolder.setBackgroundColor(Color.parseColor("#FFFFFF"));
     }
 
     @Override

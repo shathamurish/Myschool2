@@ -70,7 +70,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/brandongrotesqueblack"
-                            android:text="@string/last_news"
+                            android:text="Last News"
                             android:textAllCaps="true"
                             android:textColor="@color/black"
                             android:textSize="20sp" />
@@ -80,7 +80,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:layout_centerVertical="true"
-                            android:text="@string/view_all" />
+                            android:text="View All" />
 
 
                     </RelativeLayout>
@@ -113,7 +113,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/brandongrotesqueblack"
-                            android:text="@string/announcements"
+                            android:text="Announcements "
                             android:textAllCaps="true"
                             android:textColor="@color/black"
                             android:textSize="20sp" />
@@ -123,7 +123,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentEnd="true"
                             android:layout_centerVertical="true"
-                            android:text="@string/view_all" />
+                            android:text="View All" />
 
 
                     </RelativeLayout>
