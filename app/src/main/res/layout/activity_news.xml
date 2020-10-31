@@ -5,22 +5,22 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:transitionName="transition_login"
-    tools:context=".User.StudentActivity">
+    tools:context=".User.NewsActivity">
 
 
-<!--    <com.airbnb.lottie.LottieAnimationView-->
-<!--        android:id="@+id/sendicon"-->
-<!--        android:layout_width="100dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.45"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.046"-->
-<!--        app:lottie_autoPlay="false"-->
-<!--        app:lottie_loop="false"-->
-<!--        app:lottie_rawRes="@raw/googlealerts" />-->
+    <!--    <com.airbnb.lottie.LottieAnimationView-->
+    <!--        android:id="@+id/sendicon"-->
+    <!--        android:layout_width="100dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.45"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.046"-->
+    <!--        app:lottie_autoPlay="false"-->
+    <!--        app:lottie_loop="false"-->
+    <!--        app:lottie_rawRes="@raw/googlealerts" />-->
 
 
     <ScrollView
@@ -60,7 +60,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/sendicon">
+                    app:layout_constraintTop_toBottomOf="parent">
 
                     <RelativeLayout
                         android:layout_width="match_parent"

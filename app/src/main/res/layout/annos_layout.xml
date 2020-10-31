@@ -17,14 +17,14 @@
 
 
         <ImageView
-            android:id="@+id/news_image"
+            android:id="@+id/non_image"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/a" />
 
         <TextView
-            android:id="@+id/news_title"
+            android:id="@+id/non_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
