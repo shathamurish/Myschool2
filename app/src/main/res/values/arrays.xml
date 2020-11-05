@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ld_activityScreenTitles">
+
+    <item></item>
+    <item>Home</item>
+    <item>News</item>
+    <item>Libray</item>
+    <item>Activities</item>
+    <item>Gatway</item>
+    <item>Contact US</item>
+    <item>Know Us</item>
+    <item>Register</item>
+        <item>Grades</item>
+        <item>Requirment</item>
+
+    </string-array>
+
+    <string-array name="ld_activityScreenIcons">
+        <item>drawable/ic_home</item>
+        <item>@drawable/newsss</item>
+        <item>@drawable/library1</item>
+        <item>@drawable/active</item>
+        <item>@drawable/studentsicon</item>
+        <item>@drawable/contact_us</item>
+        <item>@drawable/imarker</item>
+        <item>@drawable/registericon</item>
+        <item>@drawable/levels</item>
+
+    </string-array>
+
+
+    
+</resources>

@@ -69,6 +69,7 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phoneeeee"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -96,7 +97,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -120,15 +121,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:elevation="5dp"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="0dp"
                 android:fontFamily="@font/sukarblack"
 
                 android:textStyle="bold"
                 />
+
             <TextView
                 android:id="@+id/textfilechoose"
+                android:layout_width="120dp"
+                android:layout_height="match_parent"/>
+<!--            <Button-->
+<!--                android:id="@+id/bu"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"/>-->
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/doneupload"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"></TextView>
+                android:layout_height="match_parent"
+                app:lottie_rawRes="@raw/upload2"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="false"/>
 
 
         </LinearLayout>
@@ -181,7 +196,6 @@
 
 
         </LinearLayout>
-
 
 
         <Button

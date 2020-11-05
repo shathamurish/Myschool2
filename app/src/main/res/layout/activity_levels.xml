@@ -1,18 +1,589 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LevelsActivity"
-    android:background="@drawable/sch11_1">
+    android:layout_marginTop="50dp"
+    android:padding="20dp"
+    android:orientation="vertical">
 
 
-    <TextView
-        android:layout_marginTop="500dp"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="- Kg 1\n- Kg 2\n- primary 1 to 9"
-        android:textSize="50dp"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.github.florent37.expansionpanel.ExpansionHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/darkblueee"
+            app:expansion_headerIndicator="@id/headerIndicator"
+            app:expansion_layout="@id/expansionLayout"
+            app:expansion_toggleOnClick="true">
+
+            <!-- HEADER -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="KG_1"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sukarbold"
+                android:textSize="40sp" />
+
+            ...
+            <!-- HEADER INDICATOR -->
+            <ImageView
+                android:id="@+id/headerIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginLeft="16dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+
+        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+        <com.github.florent37.expansionpanel.ExpansionLayout
+            android:id="@+id/expansionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/darkbluee">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="hello KG1"
+                android:fontFamily="@font/sukarregular"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <!-- CONTENT -->
+
+        </com.github.florent37.expansionpanel.ExpansionLayout>
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+        <com.github.florent37.expansionpanel.ExpansionHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/darkblueee"
+            app:expansion_headerIndicator="@id/headerIndicator2"
+            app:expansion_layout="@id/expansionLayout2"
+            app:expansion_toggleOnClick="true">
+
+            <!-- HEADER -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="KG_2"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sukarbold"
+                android:textSize="40sp" />
+
+            ...
+            <!-- HEADER INDICATOR -->
+            <ImageView
+                android:id="@+id/headerIndicator2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginLeft="16dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+
+        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+        <com.github.florent37.expansionpanel.ExpansionLayout
+            android:id="@+id/expansionLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/darkbluee">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="hello KG2"
+                android:fontFamily="@font/sukarregular"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <!-- CONTENT -->
+
+        </com.github.florent37.expansionpanel.ExpansionLayout>
+<!--    </LinearLayout>-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+        <com.github.florent37.expansionpanel.ExpansionHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/darkblueee"
+            app:expansion_headerIndicator="@id/headerIndicator3"
+            app:expansion_layout="@id/expansionLayout3"
+            app:expansion_toggleOnClick="true">
+
+            <!-- HEADER -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Level1"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sukarbold"
+                android:textSize="40sp" />
+
+            ...
+            <!-- HEADER INDICATOR -->
+            <ImageView
+                android:id="@+id/headerIndicator3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginLeft="16dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+
+        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+        <com.github.florent37.expansionpanel.ExpansionLayout
+            android:id="@+id/expansionLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/darkbluee">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="hello Level1"
+                android:fontFamily="@font/sukarregular"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <!-- CONTENT -->
+
+        </com.github.florent37.expansionpanel.ExpansionLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+        <com.github.florent37.expansionpanel.ExpansionHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/darkblueee"
+            app:expansion_headerIndicator="@id/headerIndicator4"
+            app:expansion_layout="@id/expansionLayout4"
+            app:expansion_toggleOnClick="true">
+
+            <!-- HEADER -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Level2"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sukarbold"
+                android:textSize="40sp" />
+
+            ...
+            <!-- HEADER INDICATOR -->
+            <ImageView
+                android:id="@+id/headerIndicator4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginLeft="16dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+
+        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+        <com.github.florent37.expansionpanel.ExpansionLayout
+            android:id="@+id/expansionLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/darkbluee">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="hello level2"
+                android:fontFamily="@font/sukarregular"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <!-- CONTENT -->
+
+        </com.github.florent37.expansionpanel.ExpansionLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+        <com.github.florent37.expansionpanel.ExpansionHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/darkblueee"
+            app:expansion_headerIndicator="@id/headerIndicator6"
+            app:expansion_layout="@id/expansionLayout6"
+            app:expansion_toggleOnClick="true">
+
+            <!-- HEADER -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Level3"
+                android:textColor="@color/black"
+                android:fontFamily="@font/sukarbold"
+                android:textSize="40sp" />
+
+            ...
+            <!-- HEADER INDICATOR -->
+            <ImageView
+                android:id="@+id/headerIndicator6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginLeft="16dp"
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+
+        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+        <com.github.florent37.expansionpanel.ExpansionLayout
+            android:id="@+id/expansionLayout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/darkbluee">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="hello Level3"
+                android:fontFamily="@font/sukarregular"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <!-- CONTENT -->
+
+        </com.github.florent37.expansionpanel.ExpansionLayout>
+
+    <com.github.florent37.expansionpanel.ExpansionHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkblueee"
+        app:expansion_headerIndicator="@id/headerIndicator7"
+        app:expansion_layout="@id/expansionLayout7"
+        app:expansion_toggleOnClick="true">
+
+        <!-- HEADER -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Level4"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sukarbold"
+            android:textSize="40sp" />
+
+        ...
+        <!-- HEADER INDICATOR -->
+        <ImageView
+            android:id="@+id/headerIndicator7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="16dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+
+    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+    <com.github.florent37.expansionpanel.ExpansionLayout
+        android:id="@+id/expansionLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkbluee">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="hello Level4"
+            android:fontFamily="@font/sukarregular"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <!-- CONTENT -->
+
+    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+    <com.github.florent37.expansionpanel.ExpansionHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkblueee"
+        app:expansion_headerIndicator="@id/headerIndicator8"
+        app:expansion_layout="@id/expansionLayout8"
+        app:expansion_toggleOnClick="true">
+
+        <!-- HEADER -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Level5"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sukarbold"
+            android:textSize="40sp" />
+
+        ...
+        <!-- HEADER INDICATOR -->
+        <ImageView
+            android:id="@+id/headerIndicator8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="16dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+
+    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+    <com.github.florent37.expansionpanel.ExpansionLayout
+        android:id="@+id/expansionLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkbluee">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="hello level5"
+            android:fontFamily="@font/sukarregular"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <!-- CONTENT -->
+
+    </com.github.florent37.expansionpanel.ExpansionLayout>
+    <com.github.florent37.expansionpanel.ExpansionHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkblueee"
+        app:expansion_headerIndicator="@id/headerIndicator8"
+        app:expansion_layout="@id/expansionLayout8"
+        app:expansion_toggleOnClick="true">
+
+        <!-- HEADER -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Level6"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sukarbold"
+            android:textSize="40sp" />
+
+        ...
+        <!-- HEADER INDICATOR -->
+        <ImageView
+            android:id="@+id/headerIndicator9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="16dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+
+    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+    <com.github.florent37.expansionpanel.ExpansionLayout
+        android:id="@+id/expansionLayout9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkbluee">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="hello level6"
+            android:fontFamily="@font/sukarregular"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <!-- CONTENT -->
+
+    </com.github.florent37.expansionpanel.ExpansionLayout>
+    <com.github.florent37.expansionpanel.ExpansionHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkblueee"
+        app:expansion_headerIndicator="@id/headerIndicator10"
+        app:expansion_layout="@id/expansionLayout10"
+        app:expansion_toggleOnClick="true">
+
+        <!-- HEADER -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Level7"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sukarbold"
+            android:textSize="40sp" />
+
+        ...
+        <!-- HEADER INDICATOR -->
+        <ImageView
+            android:id="@+id/headerIndicator10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="16dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+
+    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+    <com.github.florent37.expansionpanel.ExpansionLayout
+        android:id="@+id/expansionLayout10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkbluee">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="hello level7"
+            android:fontFamily="@font/sukarregular"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <!-- CONTENT -->
+
+    </com.github.florent37.expansionpanel.ExpansionLayout>
+    <com.github.florent37.expansionpanel.ExpansionHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkblueee"
+        app:expansion_headerIndicator="@id/headerIndicator11"
+        app:expansion_layout="@id/expansionLayout11"
+        app:expansion_toggleOnClick="true">
+
+        <!-- HEADER -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Level8"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sukarbold"
+            android:textSize="40sp" />
+
+        ...
+        <!-- HEADER INDICATOR -->
+        <ImageView
+            android:id="@+id/headerIndicator11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="16dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+
+    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+    <com.github.florent37.expansionpanel.ExpansionLayout
+        android:id="@+id/expansionLayout11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkbluee">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="hello level8"
+            android:fontFamily="@font/sukarregular"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <!-- CONTENT -->
+
+    </com.github.florent37.expansionpanel.ExpansionLayout>
+    <com.github.florent37.expansionpanel.ExpansionHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkblueee"
+        app:expansion_headerIndicator="@id/headerIndicator12"
+        app:expansion_layout="@id/expansionLayout12"
+        app:expansion_toggleOnClick="true">
+
+        <!-- HEADER -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Level9"
+            android:textColor="@color/black"
+            android:fontFamily="@font/sukarbold"
+            android:textSize="40sp" />
+
+        ...
+        <!-- HEADER INDICATOR -->
+        <ImageView
+            android:id="@+id/headerIndicator12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="16dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+
+    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+    <com.github.florent37.expansionpanel.ExpansionLayout
+        android:id="@+id/expansionLayout12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkbluee">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="hello level9"
+            android:fontFamily="@font/sukarregular"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <!-- CONTENT -->
+
+    </com.github.florent37.expansionpanel.ExpansionLayout>
+    </LinearLayout>
+</ScrollView>
