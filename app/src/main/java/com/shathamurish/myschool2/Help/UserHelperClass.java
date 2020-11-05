@@ -1,11 +1,13 @@
 package com.shathamurish.myschool2.Help;
 
 public class UserHelperClass {
-    String fullname, username, email, password,gender,phoneno,date;
+    String fullname, username, email, password,gender,phoneno,date,spinner;
 
     String id;
 
-    public UserHelperClass(String fullname, String username, String email, String password, String gender, String phoneno,String date) {
+
+
+    public UserHelperClass(String fullname, String username, String email, String password, String gender, String phoneno, String date, String spinner) {
         this.fullname=fullname;
         this.username = username;
         this.email = email;
@@ -13,6 +15,15 @@ public class UserHelperClass {
         this.password = password;
         this.gender = gender;
         this.date=date;
+        this.spinner=spinner;
+    }
+
+    public String getSpinner() {
+        return spinner;
+    }
+
+    public void setSpinner(String spinner) {
+        this.spinner = spinner;
     }
 
     public String getDate() {

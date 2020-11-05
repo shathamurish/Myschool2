@@ -70,7 +70,7 @@ public class Signup2Activity extends AppCompatActivity {
     TextInputLayout phoneno;
     boolean isCkecked = false;
 
-    //          String  spinner1;
+//    String  spinner1;
     FirebaseStorage storage;
     FirebaseDatabase firebaseDatabase;
 
@@ -143,6 +143,9 @@ public class Signup2Activity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int pos, long id) {
+
+//                spinner1 =spinner.getSelectedItem().toString();
+
                 // An item was selected. You can retrieve the selected item using
                 // parent.getItemAtPosition(pos)
             }
@@ -350,6 +353,8 @@ public class Signup2Activity extends AppCompatActivity {
         String _phoneno=phoneno.getEditText().getText().toString().trim();
 
 
+        String _spinner =spinner.getSelectedItem().toString();
+
 
         String _fullname=getIntent().getStringExtra("fullname");
        Log.e("name",_fullname);
@@ -373,6 +378,7 @@ public class Signup2Activity extends AppCompatActivity {
       intent2.putExtra("date",_date);
         intent2.putExtra("gender",_gender);
         intent2.putExtra("phoneno",_phoneno);
+        intent2.putExtra("spinner",_spinner);
 
 
        // intent2.putExtra("spinner1",_spinner);

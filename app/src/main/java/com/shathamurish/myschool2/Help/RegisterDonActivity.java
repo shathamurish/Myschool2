@@ -24,7 +24,7 @@ import com.shathamurish.myschool2.User.StudentActivity;
 import org.jetbrains.annotations.NotNull;
 
 public class RegisterDonActivity extends AppCompatActivity {
-    String fullname, username,  email, password,  gender,phoneno,date;
+    String fullname, username,  email, password,  gender,phoneno,date,spinner;
     boolean isCkecked=false;
     Button button;
     @Override
@@ -42,6 +42,7 @@ public class RegisterDonActivity extends AppCompatActivity {
       phoneno=getIntent().getStringExtra("phoneno");
         gender=getIntent().getStringExtra("gender");
         date=getIntent().getStringExtra("date");
+        spinner=getIntent().getStringExtra("spinner");
 
         button=findViewById(R.id.button);
 
@@ -103,7 +104,7 @@ public class RegisterDonActivity extends AppCompatActivity {
 
 //      reference.setValue("shathais meee");
 
-        UserHelperClass addNewUser = new UserHelperClass(fullname,username,email,password,gender,phoneno,date);
+        UserHelperClass addNewUser = new UserHelperClass(fullname,username,email,password,gender,phoneno,date,spinner);
 //        ظظaddNewUser.setFullname(fullname);
 //        addNewUser.setEmail(email);
 //        addNewUser.setUsername(username);
