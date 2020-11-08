@@ -42,7 +42,8 @@
         android:layout_height="110dp"
         android:layout_marginBottom="36dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="10dp">
+        tools:layout_editor_absoluteX="10dp"
+        android:layoutDirection="ltr">
 
         <Button
             android:id="@+id/getstarted_btn"

@@ -70,9 +70,11 @@ public class SignupActivity extends AppCompatActivity {
 
         String _fullname=getIntent().getStringExtra("fullname");
         Log.e("name",_fullname);
-        String _email=getIntent().getStringExtra("email");
-        String _username=getIntent().getStringExtra("username");
-        String _password=getIntent().getStringExtra("password");
+        String _address=getIntent().getStringExtra("address");
+        String _phoneno=getIntent().getStringExtra("phoneno");
+//        String _password=getIntent().getStringExtra("password");
+        String _city=getIntent().getStringExtra("city");
+
 
 
 
@@ -86,9 +88,10 @@ public class SignupActivity extends AppCompatActivity {
 
 
         intent2.putExtra("fullname",_fullname);
-        intent2.putExtra("username",_username);
-        intent2.putExtra("email",_email);
-        intent2.putExtra("password",_password);
+        intent2.putExtra("address",_address);
+        intent2.putExtra("phoneno",_phoneno);
+//        intent2.putExtra("password",_password);
+        intent2.putExtra("city",_city);
         intent2.putExtra("date",_date);
         intent2.putExtra("gender",_gender);
 

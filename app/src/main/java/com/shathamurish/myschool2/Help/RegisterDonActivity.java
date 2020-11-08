@@ -24,7 +24,7 @@ import com.shathamurish.myschool2.User.StudentActivity;
 import org.jetbrains.annotations.NotNull;
 
 public class RegisterDonActivity extends AppCompatActivity {
-    String fullname, username,  email, password,  gender,phoneno,date,spinner;
+    String fullname, address,  gender,phoneno,date,spinner,city;
     boolean isCkecked=false;
     Button button;
     @Override
@@ -35,13 +35,16 @@ public class RegisterDonActivity extends AppCompatActivity {
 
         fullname=getIntent().getStringExtra("fullname");
         Log.d("name",fullname);
-        email=getIntent().getStringExtra("email");
-        username=getIntent().getStringExtra("username");
-       password=getIntent().getStringExtra("password");
+        address=getIntent().getStringExtra("address");
+//        phoneno=getIntent().getStringExtra("username");
+//       password=getIntent().getStringExtra("password");
         gender=getIntent().getStringExtra("gender");
       phoneno=getIntent().getStringExtra("phoneno");
-        gender=getIntent().getStringExtra("gender");
+//        gender=getIntent().getStringExtra("gender");
         date=getIntent().getStringExtra("date");
+        city=getIntent().getStringExtra("city");
+
+
         spinner=getIntent().getStringExtra("spinner");
 
         button=findViewById(R.id.button);
@@ -104,7 +107,7 @@ public class RegisterDonActivity extends AppCompatActivity {
 
 //      reference.setValue("shathais meee");
 
-        UserHelperClass addNewUser = new UserHelperClass(fullname,username,email,password,gender,phoneno,date,spinner);
+        UserHelperClass addNewUser = new UserHelperClass(fullname,phoneno,address,city,gender,date,spinner);
 //        ظظaddNewUser.setFullname(fullname);
 //        addNewUser.setEmail(email);
 //        addNewUser.setUsername(username);

@@ -1,25 +1,42 @@
 package com.shathamurish.myschool2.Help;
 
 public class UserHelperClass {
-    String fullname, username, email, password,gender,phoneno,date,spinner;
+    String fullname, username, address,gender,phoneno,date,spinner,city;
 
     String id;
 
 
 
-    public UserHelperClass(String fullname, String username, String email, String password, String gender, String phoneno, String date, String spinner) {
+    public UserHelperClass(String fullname, String address,  String phoneno, String city,String gender, String date, String spinner) {
         this.fullname=fullname;
-        this.username = username;
-        this.email = email;
+//        this.username = username;
+        this.address = address;
         this.phoneno = phoneno;
-        this.password = password;
+//        this.password = password;
         this.gender = gender;
         this.date=date;
         this.spinner=spinner;
+        this.city=city;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getSpinner() {
         return spinner;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public void setSpinner(String spinner) {
@@ -92,29 +109,23 @@ public class UserHelperClass {
         this.fullname = fullname;
     }
 
-    public String getUsername() {
-        return username;
-    }
+//    public String getUsername() {
+//        return username;
+//    }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+//    public void setUsername(String username) {
+//        this.username = username;
+//    }
 
-    public String getEmail() {
-        return email;
-    }
+//    public String getEmail() {
+//        return email;
+//    }
+//
+//    public void setEmail(String email) {
+//        this.email = email;
+//    }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
-    public String getPassowrd() {
-        return password;
-    }
-
-    public void setPassowrd(String password) {
-        this.password = password;
-    }
 //    public String getPhoneno() {
 //        return phoneno;
 //    }
@@ -128,12 +139,13 @@ public class UserHelperClass {
     public String toString() {
         return "UserHelperClass{" +
                 "fullname='" + fullname + '\'' +
-                ", username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", gender='" + gender + '\'' +
+                ", address='" + address + '\'' +
                 ", phoneno='" + phoneno + '\'' +
+                ", city='" + city + '\'' +
+                ", gender='" + gender + '\'' +
                 ", date='" + date + '\'' +
+                ", spinner='" + spinner + '\'' +
+
                 '}';
     }
 }

@@ -18,7 +18,7 @@ public class RegisteronlineActivity extends AppCompatActivity {
     LottieAnimationView backbutton;
     LottieAnimationView imgIconLikee;
     Button next, login;
-    TextInputLayout fullname,username,email,password;
+    TextInputLayout fullname,username,address,password,city,phoneno;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,9 +29,13 @@ public class RegisteronlineActivity extends AppCompatActivity {
         login = findViewById(R.id.button_login);
 
         fullname=findViewById(R.id.signupname);
-        username= findViewById(R.id.signupuser);
-        email=findViewById(R.id.sigupemail);
-        password=findViewById(R.id.signuppass);
+//        username= findViewById(R.id.signupuser);
+        address=findViewById(R.id.sigupemail);
+//        password=findViewById(R.id.signuppass);
+        city=findViewById(R.id.signupcity);
+        //        Button button=findViewById(R.id.bu);
+        phoneno = findViewById(R.id.phoneeeee);
+
     }
 
     public void actionlogin(View view) {
@@ -44,14 +48,16 @@ public class RegisteronlineActivity extends AppCompatActivity {
     }
 
     public void actionnext(View view) {
-        if(!validateFullname() | !validateUsername() | !validateEmail() | !validatepass()){
+        if(!validateFullname() | !validateCity() | !validateaddress() |!validatePhoneNumber()){
          return;
         }
 
         String _fullname=fullname.getEditText().getText().toString().trim();
-        String _email=email.getEditText().getText().toString().trim();
-        String _username=username.getEditText().getText().toString().trim();;
-        String _password=password.getEditText().getText().toString().trim();
+        String _address=address.getEditText().getText().toString().trim();
+        String _phoneno=phoneno.getEditText().getText().toString().trim();
+//      String _username=username.getEditText().getText().toString().trim();;
+//        String _password=password.getEditText().getText().toString().trim();
+        String _city=city.getEditText().getText().toString().trim();
 
 
         Intent intent2 = new Intent(getApplicationContext(), SignupActivity.class);
@@ -59,9 +65,11 @@ public class RegisteronlineActivity extends AppCompatActivity {
 
 
         intent2.putExtra("fullname",_fullname);
-        intent2.putExtra("username",_username);
-        intent2.putExtra("email",_email);
-        intent2.putExtra("password",_password);
+       intent2.putExtra("phoneno",_phoneno);
+        intent2.putExtra("email",_address);
+//        intent2.putExtra("password",_password);
+        intent2.putExtra("city",_city);
+
 
         Pair[] pairs = new Pair[4];
         pairs[0] = new Pair<View, String>(imgIconLikee, "transition_image_btn");
@@ -101,34 +109,34 @@ public class RegisteronlineActivity extends AppCompatActivity {
         return true;
     }
 
-    private  boolean validateUsername(){
-        String val = username.getEditText().getText().toString().trim();
-        String checkspaces ="\\A\\w{1,20}\\z";
+    private  boolean validateCity(){
+        String val = city.getEditText().getText().toString().trim();
+//        String checkspaces ="\\A\\w{1,20}\\z";
         if (val.isEmpty()) {
-            username.setError("Field Can Not Be empty");
-            return false;
-        }else if(val.length()>20){
-            username.setError("Username is too large!");
-            return false;
-        }
-        else if(!val.matches(checkspaces)){
-            username.setError("NO White Spaces Are allowed");
+            city.setError("Field Can Not Be empty");
+        } else {
+            city.setError(null);
+            city.setErrorEnabled(false);
 
-            return false;
-        }
-        else {
-           username.setError(null);
-            username.setErrorEnabled(false);
+            }
             return true;
-        }
+//        }else if(val.length()>20){
+//            username.setError("Username is too large!");
+//            return false;
+//        }
+//        else if(!val.matches(checkspaces)){
+//            username.setError("NO White Spaces Are allowed");
+//
+//            return false;
+
 
     }
 
-    private  boolean validateEmail(){
-        String val = email.getEditText().getText().toString().trim();
+    private  boolean validateaddress(){
+        String val = address.getEditText().getText().toString().trim();
         String checkemail ="[a-zA-Z0-9._-]+@[a-z]+\\.+[a+z]+";
         if (val.isEmpty()) {
-            email.setError("Field Can Not Be empty");
+            address.setError("Field Can Not Be empty");
             return false;
         }
 //        else if(!val.matches(checkemail)){
@@ -137,38 +145,57 @@ public class RegisteronlineActivity extends AppCompatActivity {
 //            return false;
 //        }
         else {
-            email.setError(null);
-            email.setErrorEnabled(false);
+            address.setError(null);
+            address.setErrorEnabled(false);
             return true;
         }
 
     }
-
-    private  boolean validatepass(){
-        String val = password.getEditText().getText().toString().trim();
-        String checkpass ="^" +
-                //"(?=.*[0-9])" +         //at least 1 digit
-                //"(?=.*[a-z])" +         //at least 1 lower case letter
-                //"(?=.*[A-Z])" +         //at least 1 upper case letter
-                "(?=.*[a-zA-Z])" +      //any letter
-                //"(?=.*[@#$%^&+=])" +    //at least 1 special character
-                "(?=S+$)" +           //no white spaces
-                ".{4,}" +               //at least 4 characters
-                "$";
-
+    private boolean validatePhoneNumber() {
+        String val = phoneno.getEditText().getText().toString().trim();
+        String checkspaces = "Aw{1,20}z";
         if (val.isEmpty()) {
-            password.setError("Field Can Not Be empty");
-            return false; }
-//        else if(!val.matches(checkpass)){
-//            password.setError("Password should contain 4 characters!");
-//
+            phoneno.setError("Enter valid phone number");
+            return false;
+        }
+//        else if (!val.matches(checkspaces)) {
+//            phonenum.setError("No White spaces are allowed!");
 //            return false;
 //        }
+
+
         else {
-            password.setError(null);
-            password.setErrorEnabled(false);
+            phoneno.setError(null);
+            phoneno.setErrorEnabled(false);
             return true;
         }
-
     }
+
+//    private  boolean validatepass(){
+//        String val = password.getEditText().getText().toString().trim();
+//        String checkpass ="^" +
+//                //"(?=.*[0-9])" +         //at least 1 digit
+//                //"(?=.*[a-z])" +         //at least 1 lower case letter
+//                //"(?=.*[A-Z])" +         //at least 1 upper case letter
+//                "(?=.*[a-zA-Z])" +      //any letter
+//                //"(?=.*[@#$%^&+=])" +    //at least 1 special character
+//                "(?=S+$)" +           //no white spaces
+//                ".{4,}" +               //at least 4 characters
+//                "$";
+//
+//        if (val.isEmpty()) {
+//            password.setError("Field Can Not Be empty");
+//            return false; }
+////        else if(!val.matches(checkpass)){
+////            password.setError("Password should contain 4 characters!");
+////
+////            return false;
+////        }
+//        else {
+//            password.setError(null);
+//            password.setErrorEnabled(false);
+//            return true;
+//        }
+//
+//    }
 }

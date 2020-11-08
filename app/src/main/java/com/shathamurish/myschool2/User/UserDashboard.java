@@ -79,14 +79,14 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                     }
                 });
 //
-//        imageList.add(new SlideModel(R.drawable.sch10_1, "شوشو", ScaleTypes.FIT));
-//        imageList.add(new SlideModel(R.drawable.sch9, "شزا", ScaleTypes.FIT));
-//        imageList.add(new SlideModel(R.drawable.sch5, "مرحبا", ScaleTypes.FIT));
+        imageList.add(new SlideModel(R.drawable.sch10_1, "Quality of Education and Teacher efficiency", ScaleTypes.FIT));
+        imageList.add(new SlideModel(R.drawable.sch5, "Computer Labs", ScaleTypes.FIT));
+        imageList.add(new SlideModel(R.drawable.sch6, "Science Lab", ScaleTypes.FIT));
 //        imageList.add(new SlideModel(R.drawable.sch6, "hello", ScaleTypes.FIT));
 //        imageList.add(new SlideModel(R.drawable.sch11_1, "hi", ScaleTypes.FIT));
 //        imageList.add(new SlideModel(R.drawable.libraryicon, "hi", ScaleTypes.FIT));
 //
-//        imageSlider.setImageList(imageList, ScaleTypes.FIT);
+        imageSlider.setImageList(imageList, ScaleTypes.FIT);
 
         //menu hooks
         drawerLayout = findViewById(R.id.drawer_layout);

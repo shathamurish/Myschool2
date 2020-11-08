@@ -6,7 +6,8 @@
     android:layout_height="wrap_content"
     tools:context=".User.StudentActivity"
     android:padding="0dp"
-    android:transitionName="transition_login">
+    android:transitionName="transition_login"
+    android:layoutDirection="ltr">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

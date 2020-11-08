@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Home of Modern Sciences School</string>
-    <string name="powered_by">Powered By Shatha Murish</string>
+    <string name="powered_by">Powered By Coder Company</string>
 
     <!-- onboardstringd buttons -->
     <string name="skip_btn">Skip</string>
@@ -35,7 +35,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="Hmss.edu">Hmss.edu</string>
-    <string name="Hmss.edu2">Hmss.edu</string>
+    <string name="Hmss.edu2">hmss.edu</string>
 
 
     <string name="txtCredits"><a href="google.com">Google</a></string>
@@ -52,18 +52,18 @@
     <string name="announcements">Announcements</string>
 
     <string-array name="arraylist">
-        <item>Choose Level</item>
+        <item>Choose Grade</item>
         <item>K.G1</item>
         <item>K.G2</item>
-        <item>Level1</item>
-        <item>Level2</item>
-        <item>Level3</item>
-        <item>Level4</item>
-        <item>Level5</item>
-        <item>Level6</item>
-        <item>Level7</item>
-        <item>Level8</item>
-        <item>Level9</item>
+        <item>Grade1</item>
+        <item>Grade2</item>
+        <item>Grade3</item>
+        <item>Grade4</item>
+        <item>Grade5</item>
+        <item>Grade6</item>
+        <item>Grade7</item>
+        <item>Grade8</item>
+        <item>Grade9</item>
     </string-array>
 </resources>
 

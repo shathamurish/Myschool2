@@ -3,11 +3,8 @@ package com.shathamurish.myschool2.User;
 import androidx.annotation.NonNull;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.ActivityOptions;
 
 import android.content.Intent;
@@ -17,7 +14,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 
-import android.preference.Preference;
 import android.util.Log;
 import android.util.Pair;
 import android.view.View;
@@ -31,8 +27,6 @@ import android.widget.Toast;
 import com.airbnb.lottie.LottieAnimationView;
 
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
@@ -42,19 +36,12 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.nbsp.materialfilepicker.ui.FilePickerActivity;
+import com.shathamurish.myschool2.Common.putPDF;
 import com.shathamurish.myschool2.Help.RegisterDonActivity;
-import com.shathamurish.myschool2.Help.UserHelperClass;
 import com.shathamurish.myschool2.R;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.io.File;
-import java.sql.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-
-import static java.util.Arrays.asList;
 import static java.util.Arrays.parallelSetAll;
 
 
@@ -67,12 +54,14 @@ public class Signup2Activity extends AppCompatActivity {
     Button next, login, filepicker;
     TextView textView;
     Uri file;
-    TextInputLayout phoneno;
+//    TextInputLayout phoneno;
     boolean isCkecked = false;
 
 //    String  spinner1;
-    FirebaseStorage storage;
-    FirebaseDatabase firebaseDatabase;
+//    FirebaseStorage storage;
+//    FirebaseDatabase firebaseDatabase;
+    StorageReference storageReference;
+    DatabaseReference databaseReference;
 
     Intent intent;
 
@@ -93,12 +82,15 @@ public class Signup2Activity extends AppCompatActivity {
         backbutton = findViewById(R.id.back_login);
         next = findViewById(R.id.button_next);
         login = findViewById(R.id.button_login);
-        phoneno = findViewById(R.id.phoneeeee);
+
 //        Button button=findViewById(R.id.bu);
 
 
-        storage = FirebaseStorage.getInstance();
-        firebaseDatabase = FirebaseDatabase.getInstance();
+//        storage = FirebaseStorage.getInstance();
+//        firebaseDatabase = FirebaseDatabase.getInstance();
+//
+      storageReference=FirebaseStorage.getInstance().getReference();
+       databaseReference=FirebaseDatabase.getInstance().getReference("Username");
 
 
 //        button.setOnClickListener(new View.OnClickListener() {
@@ -111,28 +103,29 @@ public class Signup2Activity extends AppCompatActivity {
 
 
         doneupload = findViewById(R.id.doneupload);
-        doneupload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (isCkecked) {
-                    doneupload.setSpeed(-1);
-                    doneupload.playAnimation();
-                    isCkecked = false;
-                } else {
-                    doneupload.setSpeed(1);
-                    doneupload.playAnimation();
-
-                    uploadfile(file);
-                    isCkecked = true;
-
-
-
-
-
-
-                }
-            }
-        });
+//        doneupload.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if (isCkecked) {
+//                    doneupload.setSpeed(-1);
+//                    doneupload.playAnimation();
+//                    isCkecked = false;
+//                } else {
+//                    doneupload.setSpeed(1);
+//                    doneupload.playAnimation();
+//
+//
+////                    uploadfile(file);
+//                    isCkecked = true;
+//
+//
+//
+//
+//
+//
+//                }
+//            }
+//        });
 
         ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this,
                 R.array.arraylist, android.R.layout.simple_spinner_item);
@@ -160,11 +153,11 @@ public class Signup2Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (ContextCompat.checkSelfPermission(Signup2Activity.this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+//                if (ContextCompat.checkSelfPermission(Signup2Activity.this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
                     selectfile();
-                } else
-                    ActivityCompat.requestPermissions(Signup2Activity.this,
-                            new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 9);
+//                } else
+//                    ActivityCompat.requestPermissions(Signup2Activity.this,
+//                            new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 9);
 
 
             }
@@ -185,34 +178,34 @@ public class Signup2Activity extends AppCompatActivity {
 //        });
     }
 
-    private void uploadfile(Uri file) {
-
-       file = Uri.fromFile(new File("path/to/news/"));
-        StorageReference riversRef = storage.getReference().child("news/.pdf");
-
-        riversRef.putFile(file)
-                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        // Get a URL to the uploaded content
-                        Task<Uri> downloadUrl = taskSnapshot.getStorage().getDownloadUrl();
-                        Toast.makeText(Signup2Activity.this, " file successfuly uploaded", Toast.LENGTH_SHORT).show();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception exception) {
-                        // Handle unsuccessful uploads
-                        Toast.makeText(Signup2Activity.this, "file not successfuly uploaded", Toast.LENGTH_SHORT).show();
-                        // ...
-                    }
-                });
-    }
+//    private void uploadfile(Uri file) {
+//
+//       file = Uri.fromFile(new File("path/to/register/"));
+//        StorageReference riversRef = storage.getReference().child("register/.pdf");
+//
+//        riversRef.putFile(file)
+//                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+//                    @Override
+//                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+//                        // Get a URL to the uploaded content
+//                        Task<Uri> downloadUrl = taskSnapshot.getStorage().getDownloadUrl();
+//                        Toast.makeText(Signup2Activity.this, " file successfuly uploaded", Toast.LENGTH_SHORT).show();
+//                    }
+//                })
+//                .addOnFailureListener(new OnFailureListener() {
+//                    @Override
+//                    public void onFailure(@NonNull Exception exception) {
+//                        // Handle unsuccessful uploads
+//                        Toast.makeText(Signup2Activity.this, "file not successfuly uploaded", Toast.LENGTH_SHORT).show();
+//                        // ...
+//                    }
+//                });
+//    }
 
 //    private void uploadfile(Uri file) {
 //        String filenamefolder=System.currentTimeMillis()+"";
 //        StorageReference storageReference=storage.getReference();
-//        storageReference.child("Upload").child(filenamefolder).putFile(file).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+//        storageReference.child("Username").child(filenamefolder).putFile(file).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
 //            @Override
 //            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 //
@@ -224,8 +217,8 @@ public class Signup2Activity extends AppCompatActivity {
 //                            @Override
 //                            public void onComplete(@NonNull @NotNull Task<Void> task) {
 //                                if (task.isSuccessful()) {
-////                                    doneupload.setSpeed(-1);
-////                                    doneupload.playAnimation();
+//                                    doneupload.setSpeed(-1);
+//                                    doneupload.playAnimation();
 //
 //                                    Toast.makeText(Signup2Activity.this, " file successfuly uploaded", Toast.LENGTH_SHORT).show();
 //                                } else
@@ -248,22 +241,23 @@ public class Signup2Activity extends AppCompatActivity {
 //            @Override
 //            public void onProgress(@NonNull @NotNull UploadTask.TaskSnapshot snapshot) {
 ////
-////                doneupload.setSpeed(1);
-////                doneupload.playAnimation();
+//                doneupload.setSpeed(1);
+//                doneupload.playAnimation();
+//                Toast.makeText(Signup2Activity.this, "uploading ", Toast.LENGTH_SHORT).show();
 //
 //            }
 //        });
 //
 //
 //    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull @NotNull String[] permissions, @NonNull @NotNull int[] grantResults) {
-        if (requestCode == 9 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            selectfile();
-        }else
-            Toast.makeText(Signup2Activity.this,"please provid permission",Toast.LENGTH_SHORT).show();
-    }
+//
+//    @Override
+//    public void onRequestPermissionsResult(int requestCode, @NonNull @NotNull String[] permissions, @NonNull @NotNull int[] grantResults) {
+//        if (requestCode == 9 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+//            selectfile();
+//        }else
+//            Toast.makeText(Signup2Activity.this,"please provid permission",Toast.LENGTH_SHORT).show();
+//    }
 
 
 
@@ -282,15 +276,82 @@ public class Signup2Activity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 86 && resultCode == RESULT_OK && data != null) {
             file = data.getData();
-            textView.setText("sucess"+data.getData().getLastPathSegment());
+            textView.setText("sucess" + data.getData().getLastPathSegment());
 
 
+            doneupload.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
 
-        } else
-            Toast.makeText(Signup2Activity.this, "please selecct file", Toast.LENGTH_SHORT).show();
+                    if (isCkecked) {
+//                        doneupload.setSpeed(-1);
+//                        doneupload.playAnimation();
+                        isCkecked = false;
+                    } else {
+//                        doneupload.setSpeed(1);
+//                        doneupload.playAnimation();
+
+
+                    uploadPDFileFireBase(data.getData());
+//                   uploadfile(file);
+                        isCkecked = true;
+
+
+                    }
+                }
+            });
+        } 
+                    else
+                    Toast.makeText(Signup2Activity.this, "please selecct file", Toast.LENGTH_SHORT).show();
+                    
+               
+    }
+
+    private void uploadPDFileFireBase(Uri data) {
+
+//        final ProgressDialog progressDialog=new ProgressDialog(this);
+//        progressDialog.setTitle("file is loading...");
+//        progressDialog.show();
+
+        StorageReference reference=storageReference.child("Username"+System.currentTimeMillis()+".pdf");
+         reference.putFile(data)
+                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                     @Override
+                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                         Task<Uri> uriTask =taskSnapshot.getStorage().getDownloadUrl();
+                         while (!uriTask.isComplete());
+                         Uri uri=uriTask.getResult();
+
+                         putPDF putpdf=new putPDF(textView.getText().toString(),uri.toString());
+                         databaseReference.child(databaseReference.push().getKey()).setValue(putpdf);
+                         Toast.makeText(Signup2Activity.this,"file upload",Toast.LENGTH_SHORT).show();
+                         doneupload.setSpeed(-1);
+                         doneupload.playAnimation();
+                     }
+                 }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+             @Override
+             public void onProgress(@NonNull @NotNull UploadTask.TaskSnapshot snapshot) {
+
+//                 double progress=(100.0* snapshot.getBytesTransferred()/snapshot.getTotalByteCount());
+//                 progressDialog.setMessage("file uploaded"+(int)progress+"%");
+
+                 doneupload.setSpeed(1);
+                 doneupload.playAnimation();
+//                 doneupload.loop(true);
+                 doneupload.setRepeatCount(2);
+//                 doneupload.setSpeed(10);
+
+             }
+         });
+
 
 
     }
+
+
+
+
+
 //    @Override
 //    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 //
@@ -345,12 +406,12 @@ public class Signup2Activity extends AppCompatActivity {
 
     public void actionnext(View view) {
 
-        if(!validatePhoneNumber()){
-            return;
-        }
+//        if(!validatePhoneNumber()){
+//            return;
+//        }
 
 
-        String _phoneno=phoneno.getEditText().getText().toString().trim();
+//        String _phoneno=phoneno.getEditText().getText().toString().trim();
 
 
         String _spinner =spinner.getSelectedItem().toString();
@@ -358,11 +419,12 @@ public class Signup2Activity extends AppCompatActivity {
 
         String _fullname=getIntent().getStringExtra("fullname");
        Log.e("name",_fullname);
-        String _email=getIntent().getStringExtra("email");
-        String _username=getIntent().getStringExtra("username");
-        String _password=getIntent().getStringExtra("password");
+        String _address=getIntent().getStringExtra("address");
+        String _phoneno=getIntent().getStringExtra("phoneno");
+//       String _password=getIntent().getStringExtra("password");
       String _date =getIntent().getStringExtra("date");
         String _gender=getIntent().getStringExtra("gender");
+        String _city=getIntent().getStringExtra("city");
 
 
 
@@ -372,12 +434,13 @@ public class Signup2Activity extends AppCompatActivity {
 
 
         intent2.putExtra("fullname",_fullname);
-        intent2.putExtra("username",_username);
-        intent2.putExtra("email",_email);
-        intent2.putExtra("password",_password);
+        intent2.putExtra("address",_address);
+        intent2.putExtra("phoneno",_phoneno);
+//        intent2.putExtra("password",_password);
       intent2.putExtra("date",_date);
         intent2.putExtra("gender",_gender);
-        intent2.putExtra("phoneno",_phoneno);
+//        intent2.putExtra("phoneno",_phoneno);
+        intent2.putExtra("city",_city);
         intent2.putExtra("spinner",_spinner);
 
 
@@ -424,23 +487,5 @@ public class Signup2Activity extends AppCompatActivity {
 
 
 
-    private boolean validatePhoneNumber() {
-        String val = phoneno.getEditText().getText().toString().trim();
-        String checkspaces = "Aw{1,20}z";
-        if (val.isEmpty()) {
-            phoneno.setError("Enter valid phone number");
-            return false;
-    }
-//        else if (!val.matches(checkspaces)) {
-//            phonenum.setError("No White spaces are allowed!");
-//            return false;
-//        }
 
-
-            else {
-            phoneno.setError(null);
-            phoneno.setErrorEnabled(false);
-            return true;
-        }
-    }
 }

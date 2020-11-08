@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".User.RegisteronlineActivity"
     android:padding="0dp"
+    android:layoutDirection="ltr"
     android:transitionName="transition_login">
 
 
@@ -34,7 +35,7 @@
         android:id="@+id/imgIconLike"
         android:layout_width="220dp"
         android:layout_height="120dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
 
 
         android:transitionName="transition_image_btn"
@@ -87,44 +88,43 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/signupuser"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phoneeeee"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            app:boxStrokeColor="@color/blue"
+            app:boxStrokeWidthFocused="2dp"
+
+            app:endIconTint="@color/darkblue"
+            app:startIconDrawable="@drawable/iconsphone"
+            app:startIconTint="#1935E8">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Username"
-
-                android:inputType="text"
-                app:boxStrokeColor="@color/blue"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="clear_text"
-                app:endIconTint="@color/darkblue"
-                app:startIconDrawable="@drawable/username24"
-                app:startIconTint="#1935E8">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/baloo"
-                    android:textColor="@color/blue"
-                    app:hintTextColor="@color/blue" />
+                android:layout_height="match_parent"
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/blue"
+                app:hintTextColor="@color/blue" />
 
 
-            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/sigupemail"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email"
+                android:hint="Address"
 
-                android:inputType="textEmailAddress"
+                android:inputType="text"
                 app:boxStrokeColor="@color/blue"
                 app:boxStrokeWidthFocused="2dp"
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/darkblue"
-                app:startIconDrawable="@drawable/readmessage"
+                app:startIconDrawable="@drawable/addressicon"
                 app:startIconTint="#1935E8">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -160,31 +160,63 @@
 
 <!--            </com.google.android.material.textfield.TextInputLayout>-->
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/signuppass"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:id="@+id/signuppass"-->
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="Password"-->
+<!--                android:inputType="textPassword"-->
+<!--                app:boxStrokeColor="@color/blue"-->
+<!--                app:boxStrokeWidthFocused="2dp"-->
+<!--                app:endIconMode="clear_text"-->
+<!--                app:endIconTint="@color/darkblue"-->
+<!--                app:passwordToggleEnabled="true"-->
+<!--                app:passwordToggleTint="@color/blue"-->
+<!--                app:startIconDrawable="@drawable/ic_outline_lock_24"-->
+<!--                app:startIconTint="#1935E8">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:fontFamily="@font/baloo"-->
+<!--                    android:textColor="@color/blue"-->
+<!--                    app:hintTextColor="@color/blue" />-->
+
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signupcity"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="City"
+            android:inputType="textAutoComplete"
+            app:boxStrokeColor="@color/blue"
+            app:boxStrokeWidthFocused="2dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/darkblue"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/blue"
+            app:startIconDrawable="@drawable/cityicon"
+            app:startIconTint="#1935E8">
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Password"
-                android:inputType="textPassword"
-                app:boxStrokeColor="@color/blue"
-                app:boxStrokeWidthFocused="2dp"
-                app:endIconMode="password_toggle"
-                app:endIconTint="@color/darkblue"
-                app:passwordToggleEnabled="true"
-                app:passwordToggleTint="@color/blue"
-                app:startIconDrawable="@drawable/ic_outline_lock_24"
-                app:startIconTint="#1935E8">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/baloo"
-                    android:textColor="@color/blue"
-                    app:hintTextColor="@color/blue" />
+                android:layout_height="match_parent"
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/blue"
+                app:hintTextColor="@color/blue" />
 
 
-            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"

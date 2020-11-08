@@ -145,7 +145,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Level1"
+                android:text="Grade1"
                 android:textColor="@color/black"
                 android:fontFamily="@font/sukarbold"
                 android:textSize="40sp" />
@@ -173,7 +173,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="hello Level1"
+                android:text="hello Grade1"
                 android:fontFamily="@font/sukarregular"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
@@ -202,7 +202,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Level2"
+                android:text="Grade2"
                 android:textColor="@color/black"
                 android:fontFamily="@font/sukarbold"
                 android:textSize="40sp" />
@@ -230,7 +230,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="hello level2"
+                android:text="hello Grade2"
                 android:fontFamily="@font/sukarregular"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
@@ -259,7 +259,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Level3"
+                android:text="Grade3"
                 android:textColor="@color/black"
                 android:fontFamily="@font/sukarbold"
                 android:textSize="40sp" />
@@ -287,7 +287,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="hello Level3"
+                android:text="hello Grade3"
                 android:fontFamily="@font/sukarregular"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
@@ -308,7 +308,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Level4"
+            android:text="Grade4"
             android:textColor="@color/black"
             android:fontFamily="@font/sukarbold"
             android:textSize="40sp" />
@@ -336,7 +336,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="hello Level4"
+            android:text="hello Grade4"
             android:fontFamily="@font/sukarregular"
             android:textColor="@color/black"
             android:textSize="30sp" />
@@ -357,7 +357,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Level5"
+            android:text="Grade5"
             android:textColor="@color/black"
             android:fontFamily="@font/sukarbold"
             android:textSize="40sp" />
@@ -385,7 +385,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="hello level5"
+            android:text="hello Grade5"
             android:fontFamily="@font/sukarregular"
             android:textColor="@color/black"
             android:textSize="30sp" />
@@ -405,7 +405,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Level6"
+            android:text="Grade6"
             android:textColor="@color/black"
             android:fontFamily="@font/sukarbold"
             android:textSize="40sp" />
@@ -433,7 +433,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="hello level6"
+            android:text="hello Grade6"
             android:fontFamily="@font/sukarregular"
             android:textColor="@color/black"
             android:textSize="30sp" />
@@ -453,7 +453,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Level7"
+            android:text="Grade7"
             android:textColor="@color/black"
             android:fontFamily="@font/sukarbold"
             android:textSize="40sp" />
@@ -481,7 +481,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="hello level7"
+            android:text="hello Grade7"
             android:fontFamily="@font/sukarregular"
             android:textColor="@color/black"
             android:textSize="30sp" />
@@ -501,7 +501,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Level8"
+            android:text="Grade8"
             android:textColor="@color/black"
             android:fontFamily="@font/sukarbold"
             android:textSize="40sp" />
@@ -529,7 +529,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="hello level8"
+            android:text="hello Grade8"
             android:fontFamily="@font/sukarregular"
             android:textColor="@color/black"
             android:textSize="30sp" />
@@ -549,7 +549,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Level9"
+            android:text="Grade9"
             android:textColor="@color/black"
             android:fontFamily="@font/sukarbold"
             android:textSize="40sp" />
@@ -577,7 +577,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="hello level9"
+            android:text="hello Grade9"
             android:fontFamily="@font/sukarregular"
             android:textColor="@color/black"
             android:textSize="30sp" />

@@ -8,6 +8,7 @@
     android:layout_weight="1"
     android:background="@color/white"
     tools:context=".User.UserDashboard"
+    android:layoutDirection="ltr"
     tools:openDrawer="start">
 
 
@@ -55,7 +56,7 @@
                 android:layout_marginEnd="8dp"
                 android:padding="10dp"
                 app:titleTextColor="@color/black"
-                app:layout_constraintBottom_toTopOf="@+id/image_slider"
+                app:layout_constraintBottom_toTopOf="@+id/linearslider"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -79,8 +80,8 @@
 
             </androidx.appcompat.widget.Toolbar>
 
-            <com.denzcoskun.imageslider.ImageSlider
-                android:id="@+id/image_slider"
+            <LinearLayout
+                android:id="@+id/linearslider"
                 android:layout_width="match_parent"
                 android:layout_height="217dp"
 
@@ -88,18 +89,24 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                app:iss_auto_cycle="true"
-                app:iss_corner_radius="0"
-                app:iss_delay="0"
-                app:iss_period="1000"
-
                 app:layout_constraintBottom_toTopOf="@id/linear1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.516"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/menu_re">
 
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/image_slider"
+                android:layout_width="match_parent"
+                android:layout_height="217dp"
+                app:iss_auto_cycle="true"
+                app:iss_corner_radius="0"
+                app:iss_delay="0"
+                app:iss_period="1000">
+
             </com.denzcoskun.imageslider.ImageSlider>
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linear1"
@@ -111,7 +118,7 @@
 
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/image_slider">
+                app:layout_constraintTop_toBottomOf="@+id/linearslider">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
@@ -443,7 +450,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="5dp"
 
-                            android:text="School Levels"
+                            android:text="Grades"
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             android:textStyle="bold" />
