@@ -12,7 +12,8 @@
         android:id="@+id/powered_by_line"
         android:layout_width="200dp"
         android:layout_height="22dp"
-        android:fontFamily="@font/baloo"
+        android:fontFamily="@font/sukarblack"
+
         android:text="@string/powered_by"
         android:textColor="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"

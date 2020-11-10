@@ -70,6 +70,10 @@
                 android:layout_height="wrap_content"
                 android:hint="Full Name"
 
+
+
+                android:fontFamily="@font/sukarbold"
+
                 android:inputType="text"
                 app:boxStrokeColor="@color/blue"
                 app:boxStrokeWidthFocused="2dp"
@@ -81,7 +85,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:fontFamily="@font/baloo"
+                    android:fontFamily="@font/sukarbold"
+
                     android:textColor="@color/blue"
                     app:hintTextColor="@color/blue" />
 
@@ -97,6 +102,8 @@
             android:inputType="phone"
             app:boxStrokeColor="@color/blue"
             app:boxStrokeWidthFocused="2dp"
+            android:fontFamily="@font/sukarbold"
+
 
             app:endIconTint="@color/darkblue"
             app:startIconDrawable="@drawable/iconsphone"
@@ -105,7 +112,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/baloo"
+                android:fontFamily="@font/sukarbold"
+
                 android:textColor="@color/blue"
                 app:hintTextColor="@color/blue" />
 
@@ -118,6 +126,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Address"
+                android:fontFamily="@font/sukarbold"
+
 
                 android:inputType="text"
                 app:boxStrokeColor="@color/blue"
@@ -130,7 +140,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:fontFamily="@font/baloo"
+                    android:fontFamily="@font/sukarbold"
+
                     android:textColor="@color/blue"
                     app:hintTextColor="@color/blue" />
 
@@ -195,6 +206,8 @@
             app:boxStrokeColor="@color/blue"
             app:boxStrokeWidthFocused="2dp"
             app:endIconMode="clear_text"
+            android:fontFamily="@font/sukarbold"
+
             app:endIconTint="@color/darkblue"
             app:passwordToggleEnabled="true"
             app:passwordToggleTint="@color/blue"
@@ -204,7 +217,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/baloo"
+                android:fontFamily="@font/sukarbold"
+
                 android:textColor="@color/blue"
                 app:hintTextColor="@color/blue" />
 
@@ -229,6 +243,8 @@
                     android:layout_height="wrap_content"
                     android:elevation="5dp"
                     android:onClick="actionnext"
+                    android:fontFamily="@font/sukarblack"
+
                     android:text="Next"
                     android:textStyle="bold"
                     android:transitionName="transition_next_btn" />
@@ -243,6 +259,8 @@
                 android:background="#00000000"
                 android:elevation="5dp"
                 android:onClick="actionlogin"
+                android:fontFamily="@font/sukarblack"
+
                 android:text="Login"
                 android:textStyle="bold"
                 android:transitionName="transition_login_btn" />

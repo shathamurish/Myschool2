@@ -3,8 +3,12 @@ package com.shathamurish.myschool2.User;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -20,6 +24,8 @@ public class KnowusActivity extends FragmentActivity implements OnMapReadyCallba
     TabLayout tabLayout;
     ViewPager viewPager1;
     GoogleMap map;
+    LottieAnimationView icon;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +38,18 @@ public class KnowusActivity extends FragmentActivity implements OnMapReadyCallba
 
         tabLayout = findViewById(R.id.tabLayout3);
         viewPager1 = findViewById(R.id.view_pager2);
+//        icon = findViewById(R.id.icon2);
+//
+//        icon.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(KnowusActivity.this, UserDashboard.class);
+//                startActivity(intent);
+//
+//            }
+//        });
+
+
 //        setContentView(R.layout.activity_knowus);
 
         setViewPager(viewPager1);
@@ -60,4 +78,10 @@ public class KnowusActivity extends FragmentActivity implements OnMapReadyCallba
         map.animateCamera(CameraUpdateFactory.newLatLngZoom(school, 13));
 
     }
+    public void backarrowaction(View view) {
+
+        Intent intent = new Intent(KnowusActivity.this, UserDashboard.class);
+        startActivity(intent);
+    }
+
 }

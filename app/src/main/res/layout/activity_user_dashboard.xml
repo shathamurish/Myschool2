@@ -11,12 +11,12 @@
     android:layoutDirection="ltr"
     tools:openDrawer="start">
 
-
-                <com.google.android.material.navigation.NavigationView
+    <com.google.android.material.navigation.NavigationView
                     android:id="@+id/navigation_view"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="start"
+                    android:theme="@style/NavigationDrawerStyle"
                     app:headerLayout="@layout/menu_header"
                     app:menu="@menu/main_menu">
 
@@ -103,7 +103,7 @@
                 app:iss_auto_cycle="true"
                 app:iss_corner_radius="0"
                 app:iss_delay="0"
-                app:iss_period="1000">
+                app:iss_period="3000">
 
             </com.denzcoskun.imageslider.ImageSlider>
             </LinearLayout>
@@ -143,6 +143,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="0dp"
                             android:text="Library"
+                            android:fontFamily="@font/sukarblack"
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -178,6 +179,8 @@
                             android:layout_below="@id/imageView2"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="0dp"
+                            android:fontFamily="@font/sukarblack"
+
 
                             android:text="News"
                             android:textColor="@color/black"
@@ -231,6 +234,8 @@
                             android:layout_below="@id/imageView3"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="5dp"
+                            android:fontFamily="@font/sukarblack"
+
 
                             android:text="Student"
                             android:textColor="@color/black"
@@ -270,8 +275,9 @@
                             android:layout_below="@id/imageView4"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="5dp"
+                            android:fontFamily="@font/sukarblack"
 
-                            android:text="Activity"
+                            android:text="Activities"
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -361,6 +367,7 @@
                             android:layout_below="@id/imageView6"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="5dp"
+                            android:fontFamily="@font/sukarblack"
 
                             android:text="Contact us"
                             android:textColor="@color/black"
@@ -412,6 +419,7 @@
                             android:layout_below="@id/imageView7"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="5dp"
+                            android:fontFamily="@font/sukarblack"
 
                             android:text="Know Us"
                             android:textColor="@color/black"
@@ -449,6 +457,7 @@
                             android:layout_below="@id/imageView8"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="5dp"
+                            android:fontFamily="@font/sukarblack"
 
                             android:text="Grades"
                             android:textColor="@color/black"

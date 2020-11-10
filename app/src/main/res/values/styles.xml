@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="NavigationDrawerStyle">
+    <item name="android:fontFamily">@font/sukarblack</item>
+    </style>
+</resources>

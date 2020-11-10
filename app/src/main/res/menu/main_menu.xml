@@ -7,25 +7,31 @@
         <item
             android:id="@+id/nav_home"
             android:title="@string/home"
+            android:fontFamily="@font/sukarblack"
+
             android:icon="@drawable/ic_home"
             />
 
         <item
             android:id="@+id/nav_news"
+            android:fontFamily="@font/sukarblack"
             android:title="@string/news"
             android:icon="@drawable/newsss"/>
         <item
             android:id="@+id/nav_library"
+            android:fontFamily="@font/sukarblack"
             android:title="@string/library"
             android:icon="@drawable/library1"/>
 
         <item
             android:id="@+id/nav_activity"
+            android:fontFamily="@font/sukarblack"
             android:title="@string/activity"
             android:icon="@drawable/active"/>
         <item
             android:id="@+id/nav_student"
             android:title="@string/student"
+            android:fontFamily="@font/sukarblack"
             android:icon="@drawable/studentsicon"/>
 
 
@@ -40,25 +46,35 @@
         <item
             android:id="@+id/nav_contactus"
             android:title="@string/contactus"
+            android:fontFamily="@font/sukarblack"
             android:icon="@drawable/contact_us"/>
 
         <item
             android:id="@+id/nav_knowus"
             android:title="@string/knowas"
+            android:fontFamily="@font/sukarblack"
             android:icon="@drawable/imarker"/>
         <item
             android:id="@+id/nav_register"
             android:title="@string/onlineregister"
+            android:fontFamily="@font/sukarblack"
             android:icon="@drawable/registericon"/>
 
         <item
             android:id="@+id/nav_4"
             android:title="Grades"
+            android:fontFamily="@font/sukarblack"
             android:icon="@drawable/levels"/>
         <item
             android:id="@+id/nav_5"
             android:title="Requirment"
+            android:fontFamily="@font/sukarblack"
             android:icon="@drawable/levelss"/>
+        <item
+            android:id="@+id/nav_6"
+            android:title="Logout"
+            android:fontFamily="@font/sukarblack"
+            android:icon="@drawable/logouticon"/>
 
 
 

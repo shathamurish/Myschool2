@@ -29,6 +29,8 @@
         android:drawableEnd="@drawable/skip_icon"
         android:padding="10dp"
         android:text="@string/skip_btn"
+        android:fontFamily="@font/sukarblack"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="10dp"
@@ -77,6 +79,8 @@
             android:background="#00000000"
             android:drawableEnd="@drawable/ic"
             android:onClick="next"
+            android:fontFamily="@font/sukarblack"
+
             android:paddingBottom="0dp" />
 
 

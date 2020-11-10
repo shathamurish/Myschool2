@@ -3,7 +3,7 @@
     <style name="Theme.Myschool2" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/darkbluee</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimaryVariant">@color/blue</item>
         <item name="colorOnPrimary">@color/gray</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -23,6 +23,7 @@
 
 
     </style>
+
 <!--    <style name="SpinnerTheme" parent="android:Widget.Spinner">-->
 <!--        <item name="android:background">@drawable/ic_down_name</item>-->
 <!--    </style>-->

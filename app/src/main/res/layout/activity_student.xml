@@ -65,6 +65,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Username"
+            android:fontFamily="@font/sukarregular"
+
 
             android:inputType="textEmailAddress"
             app:boxStrokeColor="@color/blue"
@@ -77,7 +79,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/baloo"
+                android:fontFamily="@font/sukarregular"
+
                 android:textColor="@color/blue"
                 app:hintTextColor="@color/blue" />
 
@@ -90,6 +93,8 @@
             android:layout_height="wrap_content"
             android:hint="Enter Password"
             android:inputType="textPassword"
+            android:fontFamily="@font/sukarregular"
+
             app:boxStrokeColor="@color/blue"
             app:boxStrokeWidthFocused="2dp"
             app:endIconMode="password_toggle"
@@ -100,7 +105,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/baloo"
+                android:fontFamily="@font/sukarregular"
+
                 android:textColor="@color/blue"
                 app:hintTextColor="@color/blue" />
 
@@ -118,6 +124,8 @@
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/darkblue"
                 android:text="Remember Me"
+                android:fontFamily="@font/sukarblack"
+
                 android:textColor="@color/darkblue" />
 
 
@@ -128,6 +136,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="actionlogin"
+            android:fontFamily="@font/sukarblack"
+
             android:text="Login"
             android:textStyle="bold" />
 

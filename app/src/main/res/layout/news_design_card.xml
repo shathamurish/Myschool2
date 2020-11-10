@@ -27,7 +27,8 @@
             android:id="@+id/news_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/brandongrotesqueblack"
+            android:fontFamily="@font/sukarbold"
+
             android:padding="10dp"
             android:text="hello from home of modern science school"
             android:textColor="@color/black"

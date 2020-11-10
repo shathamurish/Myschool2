@@ -135,6 +135,10 @@ public class RegisterDonActivity extends AppCompatActivity {
 
 
     }
+    @Override
+    public void onBackPressed() {
+
+    }
 
 
 }

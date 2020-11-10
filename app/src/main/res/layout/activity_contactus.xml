@@ -5,12 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:transitionName="transition_login"
+    android:layoutDirection="ltr"
     tools:context=".User.ContactusActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="37dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="31dp"
+            android:layout_marginEnd="356dp"
+            android:onClick="backarrowaction"
+            app:layout_constraintBottom_toTopOf="@+id/sendmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/icons8backarrow" />
+
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/sendmail"
@@ -19,10 +36,10 @@
             android:layout_marginTop="100dp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintVertical_bias="0.42"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/sendmessage" />
@@ -31,22 +48,22 @@
             android:id="@+id/linearLayout4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="220dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-<!--            <EditText-->
+            <!--            <EditText-->
 
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="60dp"-->
-<!--                android:hint="Your Email"-->
-<!--                android:padding="12dp"-->
-<!--                android:layout_marginTop="8dp"-->
-<!--                android:textColor="@color/black"-->
-<!--                android:fontFamily="@font/sukarregular"-->
-<!--                android:textSize="20dp"/>-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="60dp"-->
+            <!--                android:hint="Your Email"-->
+            <!--                android:padding="12dp"-->
+            <!--                android:layout_marginTop="8dp"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:fontFamily="@font/sukarregular"-->
+            <!--                android:textSize="20dp"/>-->
 
             <EditText
                 android:id="@+id/textphone"
@@ -65,113 +82,113 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/sukarregular"
                 android:hint="subject"
                 android:padding="12dp"
-                android:layout_marginTop="8dp"
                 android:textColor="@color/darkblue"
-                android:fontFamily="@font/sukarregular"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
 
             <!--            <com.google.android.material.textfield.TextInputLayout-->
-<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:hint="Your Email"-->
+            <!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:hint="Your Email"-->
 
-<!--                android:inputType="textEmailAddress"-->
-<!--                app:boxStrokeColor="@color/blue"-->
-<!--                app:boxStrokeWidthFocused="2dp"-->
-<!--                app:endIconMode="clear_text"-->
-<!--                app:endIconTint="@color/darkblue"-->
-<!--                app:startIconDrawable="@drawable/readmessage"-->
-<!--                app:startIconTint="#1935E8">-->
+            <!--                android:inputType="textEmailAddress"-->
+            <!--                app:boxStrokeColor="@color/blue"-->
+            <!--                app:boxStrokeWidthFocused="2dp"-->
+            <!--                app:endIconMode="clear_text"-->
+            <!--                app:endIconTint="@color/darkblue"-->
+            <!--                app:startIconDrawable="@drawable/readmessage"-->
+            <!--                app:startIconTint="#1935E8">-->
 
-<!--                <com.google.android.material.textfield.TextInputEditText-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:fontFamily="@font/baloo"-->
-<!--                    android:textColor="@color/blue"-->
-<!--                    app:hintTextColor="@color/blue" />-->
-
-
-<!--            </com.google.android.material.textfield.TextInputLayout>-->
-
-<!--            <com.google.android.material.textfield.TextInputLayout-->
-<!--                android:id="@+id/textphone"-->
-<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="60dp"-->
-<!--                android:hint="Phone Number"-->
-<!--                android:inputType="phone"-->
-<!--                app:boxStrokeColor="@color/blue"-->
-
-<!--                app:boxStrokeWidthFocused="2dp"-->
-<!--                app:endIconTint="@color/darkblue"-->
-<!--                app:startIconDrawable="@drawable/iconsphone"-->
-<!--                app:startIconTint="#1935E8">-->
+            <!--                <com.google.android.material.textfield.TextInputEditText-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:fontFamily="@font/baloo"-->
+            <!--                    android:textColor="@color/blue"-->
+            <!--                    app:hintTextColor="@color/blue" />-->
 
 
-<!--                <com.google.android.material.textfield.TextInputEditText-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:fontFamily="@font/baloo"-->
-<!--                    android:textColor="@color/blue"-->
-<!--                    app:hintTextColor="@color/blue" />-->
-<!--            </com.google.android.material.textfield.TextInputLayout>-->
+            <!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <!--            <com.google.android.material.textfield.TextInputLayout-->
+            <!--                android:id="@+id/textphone"-->
+            <!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="60dp"-->
+            <!--                android:hint="Phone Number"-->
+            <!--                android:inputType="phone"-->
+            <!--                app:boxStrokeColor="@color/blue"-->
+
+            <!--                app:boxStrokeWidthFocused="2dp"-->
+            <!--                app:endIconTint="@color/darkblue"-->
+            <!--                app:startIconDrawable="@drawable/iconsphone"-->
+            <!--                app:startIconTint="#1935E8">-->
 
 
-<!--            <com.google.android.material.textfield.TextInputLayout-->
-<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:hint="Subject"-->
+            <!--                <com.google.android.material.textfield.TextInputEditText-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:fontFamily="@font/baloo"-->
+            <!--                    android:textColor="@color/blue"-->
+            <!--                    app:hintTextColor="@color/blue" />-->
+            <!--            </com.google.android.material.textfield.TextInputLayout>-->
 
 
-<!--                android:inputType="text"-->
-<!--                app:boxStrokeColor="@color/blue"-->
-<!--                app:boxStrokeWidthFocused="2dp"-->
-<!--                app:endIconMode="clear_text"-->
-<!--                app:endIconTint="@color/darkblue"-->
-
-<!--                app:startIconTint="#1935E8">-->
-
-<!--                <com.google.android.material.textfield.TextInputEditText-->
-<!--                    android:id="@+id/subject_contact"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:fontFamily="@font/baloo"-->
-<!--                    android:textColor="@color/blue"-->
-<!--                    app:hintTextColor="@color/blue" />-->
+            <!--            <com.google.android.material.textfield.TextInputLayout-->
+            <!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:hint="Subject"-->
 
 
-<!--            </com.google.android.material.textfield.TextInputLayout>-->
+            <!--                android:inputType="text"-->
+            <!--                app:boxStrokeColor="@color/blue"-->
+            <!--                app:boxStrokeWidthFocused="2dp"-->
+            <!--                app:endIconMode="clear_text"-->
+            <!--                app:endIconTint="@color/darkblue"-->
 
-<!--            <com.google.android.material.textfield.TextInputLayout-->
-<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="160dp"-->
-<!--                android:hint="Message"-->
+            <!--                app:startIconTint="#1935E8">-->
 
-
-<!--                android:inputType="text"-->
-<!--                app:boxStrokeColor="@color/blue"-->
-<!--                app:boxStrokeWidthFocused="2dp"-->
-<!--                app:endIconMode="clear_text"-->
-<!--                app:endIconTint="@color/darkblue"-->
-
-<!--                app:startIconTint="#1935E8">-->
-
-<!--                <com.google.android.material.textfield.TextInputEditText-->
-<!--                    android:id="@+id/messg_contact"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="160dp"-->
-<!--                    android:fontFamily="@font/baloo"-->
-<!--                    android:textColor="@color/blue"-->
-<!--                    app:hintTextColor="@color/blue" />-->
+            <!--                <com.google.android.material.textfield.TextInputEditText-->
+            <!--                    android:id="@+id/subject_contact"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:fontFamily="@font/baloo"-->
+            <!--                    android:textColor="@color/blue"-->
+            <!--                    app:hintTextColor="@color/blue" />-->
 
 
-<!--            </com.google.android.material.textfield.TextInputLayout>-->
+            <!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <!--            <com.google.android.material.textfield.TextInputLayout-->
+            <!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="160dp"-->
+            <!--                android:hint="Message"-->
+
+
+            <!--                android:inputType="text"-->
+            <!--                app:boxStrokeColor="@color/blue"-->
+            <!--                app:boxStrokeWidthFocused="2dp"-->
+            <!--                app:endIconMode="clear_text"-->
+            <!--                app:endIconTint="@color/darkblue"-->
+
+            <!--                app:startIconTint="#1935E8">-->
+
+            <!--                <com.google.android.material.textfield.TextInputEditText-->
+            <!--                    android:id="@+id/messg_contact"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="160dp"-->
+            <!--                    android:fontFamily="@font/baloo"-->
+            <!--                    android:textColor="@color/blue"-->
+            <!--                    app:hintTextColor="@color/blue" />-->
+
+
+            <!--            </com.google.android.material.textfield.TextInputLayout>-->
 
             <EditText
                 android:id="@+id/messg_contact"
@@ -191,6 +208,7 @@
                 android:layout_marginStart="0dp"
                 android:elevation="5dp"
 
+                android:fontFamily="@font/sukarblack"
 
                 android:text="Send"
                 android:textStyle="bold"

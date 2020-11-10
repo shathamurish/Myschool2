@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -116,6 +117,14 @@ public class NewsActivity extends AppCompatActivity {
         recyclerView1.setAdapter(adapter);
 
     }
+
+
+    public void backarrowaction(View view) {
+
+        Intent intent = new Intent(NewsActivity.this, UserDashboard.class);
+        startActivity(intent);
+    }
+
 }
 
 

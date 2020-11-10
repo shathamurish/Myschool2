@@ -184,6 +184,8 @@
             android:elevation="5dp"
             android:onClick="actionnext"
             android:text="Register"
+            android:fontFamily="@font/sukarblack"
+
             android:textStyle="bold"
             android:transitionName="transition_next_btn" />
 
@@ -196,6 +198,8 @@
             android:onClick="actionlogin"
             android:text="Cancell"
             android:textStyle="bold"
+            android:fontFamily="@font/sukarblack"
+
             android:transitionName="transition_login_btn" />
 
 

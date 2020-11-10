@@ -34,6 +34,7 @@
                     android:layout_marginTop="10dp"
                     app:layout_constraintBottom_toTopOf="@id/certtitle"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:lottie_autoPlay="true"
@@ -44,7 +45,7 @@
                     android:id="@+id/certtitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/sukarblack"
                     android:text="@string/certfication"
                     android:textColor="@color/darkblue"
@@ -54,19 +55,34 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="@id/cer" />
 
-                <CheckedTextView
+                <LinearLayout
                     android:id="@+id/scholldesc"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/sukarregular"
-                    android:text="@string/certi"
-                    android:textAlignment="viewEnd"
-                    android:textColor="@color/blue"
-                    android:textSize="20sp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="7dp"
+                    android:layoutDirection="ltr"
+                    android:orientation="vertical"
                     app:layout_constraintBottom_toTopOf="@id/lin1"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/certtitle" />
+                    app:layout_constraintTop_toBottomOf="@+id/certtitle">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:fontFamily="@font/sukarregular"
+                        android:text="@string/certi"
+
+                        android:textColor="@color/blue"
+                        android:textSize="20sp"
+                        app:layout_constraintTop_toBottomOf="@id/certtitle" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/lin1"
@@ -74,12 +90,12 @@
                     android:layout_height="200dp"
                     android:layout_weight="1"
                     android:baselineAligned="false"
+                    android:layoutDirection="ltr"
                     android:orientation="horizontal"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/scholldesc"
-                    android:layoutDirection="ltr">
+                    app:layout_constraintTop_toTopOf="@id/scholldesc">
 
 
                     <LinearLayout
@@ -147,10 +163,14 @@
 
                             <TextView
                                 android:id="@+id/link1"
+                                android:fontFamily="@font/sukarblack"
+
+
                                 android:layout_width="match_parent"
                                 android:layout_height="30dp"
                                 android:layout_marginStart="10dp"
                                 android:layout_marginTop="15dp"
+
 
 
                                 android:text="@string/Hmss.edu"
@@ -173,6 +193,9 @@
                                 android:layout_height="30dp"
                                 android:layout_marginStart="10dp"
                                 android:layout_marginTop="15dp"
+                                android:fontFamily="@font/sukarblack"
+
+
 
                                 android:text="@string/Hmss.edu2" />
 
@@ -250,6 +273,9 @@
                                 android:layout_height="30dp"
                                 android:layout_marginStart="10dp"
                                 android:layout_marginTop="15dp"
+                                android:fontFamily="@font/sukarblack"
+
+
 
 
                                 android:text="@string/info_hmss_edu_com"

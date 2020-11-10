@@ -155,6 +155,12 @@ public class ContactusActivity extends AppCompatActivity {
 //            Toast.makeText(ContactusActivity.this, "mail send", Toast.LENGTH_SHORT).show();
 //
 //        }
+
+    public void backarrowaction(View view) {
+
+        Intent intent = new Intent(ContactusActivity.this, UserDashboard.class);
+        startActivity(intent);
+    }
     }
 
 

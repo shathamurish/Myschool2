@@ -36,10 +36,10 @@
         android:id="@+id/imgIconLike"
         android:layout_width="220dp"
         android:layout_height="120dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="150dp"
 
 
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:transitionName="transition_image_btn"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
         android:orientation="vertical"
-        android:padding="30dp"
+        android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -70,6 +70,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Choose Gender"
+            android:fontFamily="@font/sukarblack"
+
             android:textColor="@color/blue"
             android:textSize="18sp" />
 
@@ -78,6 +80,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
+            android:fontFamily="@font/sukarblack"
+
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
@@ -112,6 +116,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Date"
+            android:fontFamily="@font/sukarblack"
+
             android:textColor="@color/blue"
             android:textSize="18sp" />
 
@@ -120,6 +126,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:calendarViewShown="false"
+            android:fontFamily="@font/sukarblack"
+
             android:datePickerMode="spinner"
             android:spinnersShown="true" />
 
@@ -135,6 +143,8 @@
                 android:layout_height="wrap_content"
                 android:elevation="5dp"
                 android:onClick="actionnext"
+                android:fontFamily="@font/sukarblack"
+
                 android:text="Next"
                 android:textStyle="bold"
                 android:transitionName="transition_next_btn" />
@@ -148,6 +158,8 @@
             android:layout_height="wrap_content"
             android:background="#00000000"
             android:elevation="5dp"
+            android:fontFamily="@font/sukarblack"
+
             android:onClick="actionprev"
             android:text="Previous"
             android:textStyle="bold"

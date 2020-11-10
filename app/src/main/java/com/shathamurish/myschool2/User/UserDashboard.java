@@ -234,6 +234,13 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
                 FancyToast.makeText(this,"levels of school !",FancyToast.LENGTH_LONG,FancyToast.SUCCESS,true).show();
                 break;
+
+
+            case R.id.nav_6:
+//
+               finish();
+
+
 //
 
         }
